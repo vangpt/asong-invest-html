@@ -2,6 +2,12 @@
 
 module.exports = {
   content: ['./src/**/*.{html,js,pug}'],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        primary: '#f94c3b',
+      },
+    },
+  },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp')],
 }
