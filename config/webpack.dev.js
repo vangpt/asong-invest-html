@@ -2,6 +2,8 @@ const { merge } = require('webpack-merge')
 
 const common = require('./webpack.common')
 
+const { htmlWebpackPlugins } = require('./config')
+
 module.exports = merge(common, {
   // Set the mode to development or production
   mode: 'development',
@@ -17,6 +19,10 @@ module.exports = merge(common, {
     port: 8080,
     historyApiFallback: true,
   },
+  plugins: [
+    // Generates an HTML file from a template
+    ...htmlWebpackPlugins,
+  ],
   module: {
     rules: [
       // Styles: Inject CSS into the head with source maps

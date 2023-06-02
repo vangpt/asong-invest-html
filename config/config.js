@@ -13,7 +13,7 @@ const paths = {
 // Define Javascript file name in src
 const jsFile = {
   main: 'main',
-  about: 'about',
+  home: 'home',
 }
 
 // Define entry for webpack
@@ -24,8 +24,14 @@ const entry = Object.values(jsFile).reduce(
 
 // Define Pages info for HtmlWebpackPlugin
 const pagesInfo = [
-  { title: 'Dashboard', filename: 'index.html', template: 'index.html', chunks: [] },
-  { title: 'About', filename: 'about.html', template: 'about.html', chunks: [jsFile.about] },
+  {
+    title: 'Trang chủ',
+    filename: 'index.html',
+    template: 'index.pug',
+    chunks: [jsFile.home],
+    build: true,
+    buildName: 'trang-chu.html',
+  },
 ]
 
 // List HtmlWebpackPlugin that render dist folder
@@ -33,16 +39,31 @@ const htmlWebpackPlugins = pagesInfo.map(
   (page) =>
     new HtmlWebpackPlugin({
       title: page.title,
-      template: `${paths.src}/pages/${page.filename}`,
+      template: `${paths.src}/pages/${page.template}`,
       filename: page.filename,
       chunks: [jsFile.main, ...page.chunks],
       publicPath: './',
     })
 )
 
+const htmlWebpackPluginsBuild = pagesInfo
+  .filter((item) => item.build)
+  .map(
+    (page) =>
+      new HtmlWebpackPlugin({
+        title: page.title,
+        template: `${paths.src}/pages/${page.template}`,
+        filename: page?.buildName || page.filename,
+        chunks: [jsFile.main, ...page.chunks],
+        publicPath: './',
+        minify: false,
+      })
+  )
+
 module.exports = {
   paths,
   entry,
   pagesInfo,
+  htmlWebpackPluginsBuild,
   htmlWebpackPlugins,
 }

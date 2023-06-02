@@ -33,9 +33,7 @@ module.exports = {
         },
       ],
     }),
-
-    // Generates an HTML file from a template
-  ].concat(...htmlWebpackPlugins),
+  ],
 
   // Determine how modules within the project are treated
   module: {
@@ -52,6 +50,22 @@ module.exports = {
       // Fonts: Inline files
       { test: /\.(woff(2)?|eot|ttf|otf)$/, type: 'asset/inline' },
 
+      // Pug: Use Pug to render html file
+      {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: 'pug-loader',
+            options: {
+              // Define root path, then modify your includes to start with a /
+              root: paths.src,
+              pretty: true,
+            },
+          },
+        ],
+      },
+
+      // Html: Load html file, don't need if use Pug
       {
         test: /\.(html)$/,
         include: paths.pages,

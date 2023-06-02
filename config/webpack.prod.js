@@ -4,6 +4,8 @@ const { merge } = require('webpack-merge')
 
 const common = require('./webpack.common')
 
+const { htmlWebpackPluginsBuild } = require('./config')
+
 module.exports = merge(common, {
   mode: 'production',
   devtool: false,
@@ -32,7 +34,7 @@ module.exports = merge(common, {
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
-  ],
+  ].concat(...htmlWebpackPluginsBuild),
   optimization: {
     minimize: true,
     minimizer: [new CssMinimizerPlugin(), '...'],
