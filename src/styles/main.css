@@ -12,3 +12,7 @@
     @apply text-black;
   }
 }
+
+#nav-sp.active {
+  left: 0;
+}
