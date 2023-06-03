@@ -12,3 +12,9 @@
     @apply text-black;
   }
 }
+
+@layer components {
+  .c-transition {
+    @apply transition-all ease-in-out duration-300;
+  }
+}

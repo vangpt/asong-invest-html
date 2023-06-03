@@ -1,0 +1,13 @@
+mixin banner(title, desc, image)
+  .relative
+    .bg-cover.bg-center.bg-no-repeat.relative.aspect-video.w-full(
+      style='background-image: linear-gradient(180deg, rgba(98,97,102,0.5) 0%, rgba(194,194,204,0.25) 100%), url(' + image + ')',
+      class='h-[600px]'
+    )
+      .absolute.w-full.h-full.top-0.flex.items-center.z-10
+        .container
+          .text-white(class='max-w-[730px]')
+            h4.text-xl.mb-4(class='md:text-2xl')= title
+            p.text-3xl.drop-shadow-lg.mb-4.font-bold(class='md:text-7xl md:leading-tight')= desc
+            .flex.items-center
+              a.bg-primary.p-3(href='#') WORK WITH US
