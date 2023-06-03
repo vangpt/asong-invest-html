@@ -1,0 +1,19 @@
+mixin articleType2(title, image ,desc, isNews)
+  article.c-transition.group.bg-white.border(class='hover:bg-gray-200 hover:shadow-lg')
+    .overflow-hidden
+      img.object-cover.c-transition.w-full.h-full.aspect-video(
+        src=image,
+        class='group-hover:scale-110',
+        alt='article'
+      )
+
+    .p-4.pt-2(class='lg:p-5')
+      .font-bold.text-lg.c-transition.line-clamp-2(class='hover:text-primary')= title
+      .text-sm.my-4= desc
+      div
+        if (isNews)
+          .flex.items-center.text-primary
+            i.icon.icon-calendar_today
+            span.ml-2 22/07/2022
+        else
+          a.font-medium.text-sm.text-pink-100(href='chi-tiet-tin-tuc.html') READ MORE >>

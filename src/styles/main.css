@@ -13,6 +13,11 @@
   }
 }
 
+@layer components {
+  .c-transition {
+    @apply transition-all ease-in-out duration-300;
+  }
+}
 #nav-sp.active {
   left: 0;
 }
