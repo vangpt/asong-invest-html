@@ -1,0 +1,52 @@
+extends /layouts/default
+
+block title
+  - const title = htmlWebpackPlugin.options.title
+  title= title
+
+block content
+  include /components/breadcrumb
+  +breadcrumb('Tin tức', 'banner02.png')
+
+  .container
+    .my-14
+      h3.text-2xl.font-semibold Dịch vụ seo top từ khóa Google uy tín
+      span.flex.items-center.mt-3
+        i.icon.icon-calendar_today.mr-3
+        span 25/10/2022
+
+      .mt-3 Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với các công cụ tìm kiếm cũng như người dùng Bên cạnh đó tạo ra các tín hiệu bên ngoài trang với mục đích đưa các từ khóa liên quan đến website đạt được thứ hạng cao trên Google.
+
+      .font-semibold.my-5 1.SEO Top Google là gì?
+
+      .mb-5 - SEO top Google chính là thuật ngữ mà những người làm SEO vẫn thường hay nhắc đến. Vậy SEO top Google được nhắc đến ở đây nghĩa là gì? Khi tìm kiếm (Search) bất cứ một từ khóa nào thì Google sẽ trả về cho mọi người từ 300 – 1000 kết quả khác nhau nhưng chúng sẽ được phân bố theo từng phân trang riêng biệt. 1 trang thường chứa 10 kết quả hiển thị, cùng với đó là 8 kết quả tối đa từ Adwords. Tất cả những lưu lượng truy cập và click vào tìm kiếm đều được thực hiện 99% từ trang 1 của google. Vì vậy mà hiểu đơn giản Top Google chính là việc đặt thứ hạng kết quả từ 1 đến 10 trong trang 1 của kết quả hiển thị tìm kiếm Google.
+
+      .mb-5 - Ngày nay, rất nhiều nhiều doanh nghiệp đã chú trọng hơn đến SEO nên để có thể lên top Google sẽ khó hơn rất nhiều bởi vì sự cạnh tranh ngày càng lớn. Cùng với đó là sự thay đổi thường xuyên của Google dẫn đến sự khó khăn hơn trong công việc đẩy lên top.
+
+      .mb-5 - Ngày nay, rất nhiều nhiều doanh nghiệp đã chú trọng hơn đến SEO nên để có thể lên top Google sẽ khó hơn rất nhiều bởi vì sự cạnh tranh ngày càng lớn. Cùng với đó là sự thay đổi thường xuyên của Google dẫn đến sự khó khăn hơn trong công việc đẩy lên top.
+
+      img.object-cover.c-transition.mb-5.w-full(
+        src='assets/images/bg-completed-project.png',
+        alt='new detail'
+      )
+
+      .font-semibold.my-5 2. Điều bạn cần ở dịch vụ seo top từ khóa Google uy tín
+
+      .mb-5 - Sự uy tín: Sự uy tín luôn xuất phát từ lòng chân thực. 1 đơn vị cung cấp dịch vụ seo top từ khóa Google uy tín “CÓ TÂM CÓ TẦM” sẽ tận tình tư vấn cho các bạn từ khâu đầu tiên như cách tiếp cận khách hàng tiềm năng trên website như thế nào thay vì những lời hứa hẹn hoa mỹ.
+
+      .mb-5 - Sự an toàn: Điều này sẽ còn tùy thuộc vào cách cung cấp dịch vụ seo top từ khóa Google uy tín của mỗi đơn vị. Nếu làm seo mũ đen thì từ khóa lên top sẽ rất nhanh nhưng cũng dễ bị Google phạt và các bạn có thể sẽ không bán được hàng nữa. Còn seo mũ trắng hay còn có tên gọi khác là seo từ khóa an toàn, loại seo này thời gian lên top sẽ lâu hơn 1 chút, dù vậy vô cùng bền vững để phát triển website hay các công việc kinh doanh.
+
+      .mb-5 - Sự bền vững: Từ khóa lên top một cách ổn định sẽ tạo ra được lượng truy cập vào website ngày một lớn. Như thế thì cơ hội bán được hàng sẽ được nhiều hơn. Bạn nên lựa chọn những đơn vị cung cấp dịch vụ seo top từ khóa Google uy tín này để bán hàng lâu dài.
+
+      img.object-cover.c-transition.mb-5.w-full(
+        src='assets/images/map-earth.png',
+        alt='new detail'
+      )
+
+      .text-xl.font-semibold.pb-4.border-b-2 Other News
+
+      section.grid.grid-cols-1.gap-5.mt-4(class='md:grid-cols-3 md:gap-10')
+        - var articleType2List = [{ title: 'Thiết kế website trọn gói giá rẻ', desc: 'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c', image: 'assets/images/news01.jpeg' }, { title: 'EDịch vụ seo top từ khóa Google uy tín', image: 'assets/images/news02.jpeg', desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }, { title: 'Công việc cần làm của dịch vụ SEO', image: 'assets/images/news03.jpeg',desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }]
+        each item in articleType2List
+          include /components/article-type2
+          +articleType2(item.title, item.image, item.desc, true)

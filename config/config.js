@@ -14,6 +14,10 @@ const paths = {
 const jsFile = {
   main: 'main',
   home: 'home',
+  aboutUs: 'aboutUs',
+  contact: 'contact',
+  news: 'news',
+  newsDetail: 'news-detail',
 }
 
 // Define entry for webpack
@@ -31,6 +35,38 @@ const pagesInfo = [
     chunks: [jsFile.home],
     build: true,
     buildName: 'trang-chu.html',
+  },
+  {
+    title: 'About us',
+    filename: 'about-us.html',
+    template: 'about-us.pug',
+    chunks: [jsFile.aboutUs],
+    build: true,
+    buildName: 'about-us.html',
+  },
+  {
+    title: 'Contact',
+    filename: 'contact.html',
+    template: 'contact.pug',
+    chunks: [jsFile.contact],
+    build: true,
+    buildName: 'contact.html',
+  },
+  {
+    title: 'News',
+    filename: 'news.html',
+    template: 'news.pug',
+    chunks: [jsFile.news],
+    build: true,
+    buildName: 'news.html',
+  },
+  {
+    title: 'News Detail',
+    filename: 'news-detail.html',
+    template: 'news-detail.pug',
+    chunks: [jsFile.newsDetail],
+    build: true,
+    buildName: 'news-detail.html',
   },
 ]
 
