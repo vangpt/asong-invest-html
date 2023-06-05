@@ -17,6 +17,9 @@
   .c-transition {
     @apply transition-all ease-in-out duration-300;
   }
+  .c-title-breadcrumb {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl md:text-6xl text-white uppercase text-center;
+  }
 }
 #nav-sp.active {
   left: 0;

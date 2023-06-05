@@ -1,0 +1,14 @@
+mixin articleType1(title, image ,desc1, desc2, desc3)
+  article.c-transition.group.bg-white(class='hover:bg-gray-200 hover:shadow-lg')
+    .overflow-hidden
+      img.object-cover.c-transition.w-full.h-full.aspect-video(
+        src=image,
+        class='group-hover:scale-110',
+        alt='article'
+      )
+
+    .p-4.pt-2(class='lg:p-5')
+      .font-bold.text-lg.c-transition.line-clamp-2.text-center(class='hover:text-primary')= title
+      .mt-4= desc1
+      .mt-4= desc2
+      .mt-4= desc3

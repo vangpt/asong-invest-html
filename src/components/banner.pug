@@ -1,8 +1,8 @@
 mixin banner(title, desc, image)
   .relative
-    .bg-cover.bg-center.bg-no-repeat.relative.aspect-video.w-full(
+    .bg-cover.bg-center.bg-no-repeat.relative.w-full(
       style='background-image: linear-gradient(180deg, rgba(98,97,102,0.5) 0%, rgba(194,194,204,0.25) 100%), url(' + image + ')',
-      class='h-[600px]'
+      class='pt-[27%] min-h-[300px]'
     )
       .absolute.w-full.h-full.top-0.flex.items-center.z-10
         .container
