@@ -28,7 +28,7 @@ block content
         class='max-w-[600px]'
       )
 
-  .bg-gray-200.py-8
+  .bg-gray-100.py-8
     .container
       .text-pink-100.text-2xl.font-bold.mt-8 ABOUT US
       .grid.grid-cols-1.gap-10.mt-5(class='lg:grid-cols-3')
@@ -68,14 +68,15 @@ block content
   .container
     .my-14
       .text-pink-100.text-2xl.font-bold.text-center OUR GREAT TEAM
-      .grid.grid-cols-4
+      .grid.grid-cols-2(class='md:grid-cols-3')
         - var serviceList = [{ image: 'completed-project01.png', title: 'Sung Seung-Hoon Sung', subTitle:'Managing Partners' },{ image: 'completed-project01.png', title: 'Byun Jong-Jin (John)', subTitle:'Managing Partners' },{ image: 'completed-project01.png', title: 'Kim So-Yeun', subTitle:'Executive Director' },{ image: 'completed-project01.png', title: 'Hoang Thuy Le Duong', subTitle:'Executive Director' },{ image: 'completed-project01.png', title: 'Tran Hong Nhung', subTitle:'Directors' },{ image: 'completed-project01.png', title: 'Ng Ser Miang', subTitle:'Special Advisors' },]
         each item, index in serviceList
-          .col-span-2.group(class='first:border-0 md:col-span-1')
-            .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full.transition.ease-in-out(
-              class='hover:-translate-y-3'
-            )
-              img.rounded-full.object-cover(src=`assets/images/${item.image}`)(class='w-[62px] h-[62px]')
+          .col-span-1.group(class='first:border-0')
+            .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full
+              .overflow-hidden.rounded-full(class='w-[140px] h-[140px]')
+                img.rounded-full.object-cover.c-transition(src=`assets/images/${item.image}`)(
+                  class='w-[140px] h-[140px] hover:scale-125'
+                )
               .text-center.mt-4.text-blue-100.text-xl= item.title
               i.text-center.text-lg.text-pink-100.font-light= item.subTitle
 

@@ -5,6 +5,13 @@ window.addEventListener('DOMContentLoaded', function () {
   const navSP = doc.querySelector('#nav-sp')
   const navCloseBtn = doc.querySelector('#nav-close-btn')
   const backdrop = doc.querySelector('#backdrop')
+  const listNavItemHeader = doc.querySelectorAll('.nav-item-header')
+
+  for (let i = 0; i < listNavItemHeader.length; i++) {
+    if (listNavItemHeader[i].getAttribute('href') === window.location.pathname) {
+      listNavItemHeader[i].classList.add('text-primary')
+    }
+  }
 
   function toggleNavSP() {
     if (navSP.classList.contains('active')) {
