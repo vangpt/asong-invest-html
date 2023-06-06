@@ -1,6 +1,8 @@
 mixin articleType2(title, image ,desc, isNews)
-  article.c-transition.group.bg-white.border(class='hover:bg-gray-200 hover:shadow-lg')
-    a(href=isNews === true ? '/news-detail.html' : '')
+  article.c-transition.group.bg-white.border(class='hover:bg-gray-200 hover:shadow-lg')(
+    class=isNews ? 'rounded-[20px] overflow-hidden' : ''
+  )
+    a(href=isNews ? '/news-detail.html' : '')
       .overflow-hidden
         img.object-cover.c-transition.w-full.h-full.aspect-video(
           src=image,

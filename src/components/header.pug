@@ -1,10 +1,4 @@
-header.shadow-md
-  .bg-white.border-b.hidden(class='md:block')
-    .container.px-4.mx-auto.flex.items-center.py-2
-      i.icon.icon-mail.icon-lg.mr-2.text-gray-500
-      a.text-sm.text-gray-500.mr-5(href='mailto:example@gmail.com') example@gmail.com
-      i.icon.icon-phone.icon-lg.mr-2.text-gray-500
-      .text-sm.text-gray-500 0123456789
+header.shadow-md.sticky.top-0.bg-white.z-20
   .container.px-4.mx-auto.flex.justify-between.items-center.py-2
     a(href='/') 
       img.object-cover.pl-2(src='assets/logo.jpg', alt='logo', class='w-[60px] md:pl-0 md:w-[120px]')
@@ -13,9 +7,7 @@ header.shadow-md
       .mx-7
         a.font-medium.text-xl.uppercase.text-primary.transition-all(href='/', class='hover:text-primary') home
       .mx-7
-        a.text-xl.uppercase.transition-all(href='/about-us.html', class='hover:text-primary') pages
-      .mx-7
-        a.text-xl.uppercase.transition-all(href='#', class='hover:text-primary') service
+        a.text-xl.uppercase.transition-all(href='/about-us.html', class='hover:text-primary') about us
       .mx-7
         a.text-xl.uppercase.transition-all(href='/news.html', class='hover:text-primary') news
       .mx-7
@@ -28,9 +20,7 @@ nav#nav-sp.fixed.top-0.bottom-0.transition-all.bg-white.z-50.p-5(class='-left-[3
     .mb-3
       a.font-medium.text-xl.uppercase.text-primary.transition-all(href='/', class='hover:text-primary') home
     .mb-3
-      a.text-xl.uppercase.transition-all(href='/about-us.html', class='hover:text-primary') pages
-    .mb-3
-      a.text-xl.uppercase.transition-all(href='#', class='hover:text-primary') service
+      a.text-xl.uppercase.transition-all(href='/about-us.html', class='hover:text-primary') about us
     .mb-3
       a.text-xl.uppercase.transition-all(href='/news.html', class='hover:text-primary') news
     .mb-3

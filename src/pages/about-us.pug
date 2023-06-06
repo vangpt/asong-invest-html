@@ -10,8 +10,7 @@ block content
 
   .container
     .my-14
-      .text-pink-100.text-2xl.font-bold INTRODUCTION ASONG
-      .font-bold.my-3.text-xl Who We Are
+      .text-pink-100.text-2xl.font-bold.mb-5 Who We Are
       .grid.grid-cols-1.gap-10(class='md:grid-cols-3')
         .col-span-1 ASONG INVEST is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.
         .col-span-1 When mobilizing our capital into investments, we will consider our investment actions on local social, economic, and environmental impacts alongside financial returns.
@@ -32,7 +31,7 @@ block content
   .bg-gray-200.py-8
     .container
       .text-pink-100.text-2xl.font-bold.mt-8 ABOUT US
-      .grid.grid-cols-1.gap-10.mt-5(class='md:grid-cols-3')
+      .grid.grid-cols-1.gap-10.mt-5(class='lg:grid-cols-3')
         .col-span-1
           .font-bold.text-xl Our Mission & Focus
           br
@@ -68,33 +67,21 @@ block content
 
   .container
     .my-14
-      .text-pink-100.text-2xl.font-bold OUR GREAT TEAM
-      .flex.flex-col(class='md:flex-row')
-        .flex-grow.flex.mt-4.mr-4.flex-col(class='md:flex-row')
-          .mr-5.mb-2(class='w-[100px]')
-            img.w-full(src='assets/images/about-01.png')
-          .flex-grow.flex-1
-            .font-bold.mb-1 Team Members:
-            table
-              tr
-                td Managing Partners:
-                td.pl-4 Sung Seung-Hoon Sung, Byun Jong-Jin (John)
-              tr
-                td Executive Director:
-                td.pl-4 Kim So-Yeun, Hoang Thuy Le Duong
-              tr
-                td Directors:
-                td.pl-4 Tran Hong Nhung
+      .text-pink-100.text-2xl.font-bold.text-center OUR GREAT TEAM
+      .grid.grid-cols-4
+        - var serviceList = [{ image: 'completed-project01.png', title: 'Sung Seung-Hoon Sung', subTitle:'Managing Partners' },{ image: 'completed-project01.png', title: 'Byun Jong-Jin (John)', subTitle:'Managing Partners' },{ image: 'completed-project01.png', title: 'Kim So-Yeun', subTitle:'Executive Director' },{ image: 'completed-project01.png', title: 'Hoang Thuy Le Duong', subTitle:'Executive Director' },{ image: 'completed-project01.png', title: 'Tran Hong Nhung', subTitle:'Directors' },{ image: 'completed-project01.png', title: 'Ng Ser Miang', subTitle:'Special Advisors' },]
+        each item, index in serviceList
+          .col-span-2.group(class='first:border-0 md:col-span-1')
+            .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full.transition.ease-in-out(
+              class='hover:-translate-y-3'
+            )
+              img.rounded-full.object-cover(src=`assets/images/${item.image}`)(class='w-[62px] h-[62px]')
+              .text-center.mt-4.text-blue-100.text-xl= item.title
+              i.text-center.text-lg.text-pink-100.font-light= item.subTitle
 
-        .flex.mt-4.flex-col(class='md:flex-row')
-          .mr-5.mb-2(class='w-[100px]')
-            img.w-full(src='assets/images/about-01.png')
-          .flex-grow.flex-1
-            .font-bold.mb-2 Special Advisors:
-            div Ng Ser Miang,
-  .bg-cover.bg-center.bg-no-repeat.relative.w-full(
-    style='background-image: url(assets/images/bg-statistical.png)'
-  )
+  //- .bg-cover.bg-center.bg-no-repeat.relative.w-full(
+  //-   style='background-image: url(assets/images/bg-statistical.png)'
+  //- )
     .container.py-9
       .text-center.text-4xl.font-bold.mt-4.mb-14 Business Partners
       .grid.grid-cols-3
