@@ -9,7 +9,7 @@ block content
   +banner('We work for', 'Insuring Your Future From Today', 'assets/images/banner01.png')
 
   .container
-    .grid.grid-cols-1.gap-10.my-14(class='lg:grid-cols-2')
+    .flex.flex-col-reverse.gap-10.my-14(class='lg:grid lg:grid-cols-2')
       .col-span-1
         iframe(
           src='https://www.youtube.com/embed/1MTkZPys7mU',
@@ -23,28 +23,27 @@ block content
         )
       .col-span-1
         div
-          .font-bold.text-primary ABOUT US
-          .text-2xl.font-bold.my-3 We are the largest Business expert in
-          .text-3xl.font-bold Europe and Asia
-          .flex.mt-4
+          h2.text-2xl.font-bold.text-primary.text-xl ABOUT US
+          h3.text-2xl.font-bold.mt-3 We are the largest Business expert in
+          .text-3xl.font-bold.my-5 Europe and Asia
+          .flex.mt-6
             .mr-5(class='w-[62px]')
               img(src='assets/images/about-01.png')
             .flex-grow.flex-1
-              .text-sm.font-bold.mb-2 Extra benefit through Invest
+              .text-sm.font-bold.mb-1 Extra benefit through Invest
               div From banking and insurance to wealth management and securities distribution, we dedicated financial
-          .flex.mt-4
+          .flex.mt-6
             .mr-5(class='w-[62px]')
               img(src='assets/images/about-01.png')
             .flex-grow.flex-1
-              .text-sm.font-bold.mb-2 Extra benefit through Invest
+              .text-sm.font-bold.mb-1 Extra benefit through Invest
               div From banking and insurance to wealth management and securities distribution, we dedicated financial
 
-  .bg-cover.bg-center.bg-no-repeat.relative.w-full(
-    style='background-image: url(assets/images/bg-service.png)'
-  )
+    //- style='background-image: url(assets/images/bg-service.png)'
+  .bg-cover.bg-center.bg-no-repeat.relative.w-full
     .container.py-24
-      .text-center.text-pink-100 SERVICE AREAS
-      .text-center.text-2xl.font-bold.my-4 Services we serve to you
+      h2.text-2xl.font-bold.text-center.text-pink-100 SERVICE AREAS
+      h3.text-3xl.text-center.font-bold.my-4 Services we serve to you
       .text-center From banking and insurance to wealth management and on securities distribution, we dedicated financial services them the teams serve all major sectors. of the industry.
       .grid.my-14.grid-cols-6
         - var serviceList = [{ image: 'service01.png', title: 'Retirement Planning' },{ image: 'service02.png', title: 'Home and Business Loan' },{ image: 'service03.png', title: 'Business Consultation' },{ image: 'service04.png', title: 'Saving and Strategy' },{ image: 'service05.png', title: 'Life & Health Insurance' },{ image: 'service06.png', title: 'Banking and Financial' }]
@@ -54,19 +53,19 @@ block content
           )(
             class=index % 2 === 0 && 'border-l-0 md:border-l'
           )
-            .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full.transition.ease-in-out(
+            .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full.c-transition(
               class='hover:-translate-y-3'
             )
               img(src=`assets/images/${item.image}`, width='62px')
-              .text-center.mt-4.text-blue-100(class='group-hover:font-bold')= item.title
+              .text-center.mt-4.text-blue-100= item.title
 
   .bg-cover.bg-center.bg-no-repeat.relative.w-full(
     style='background-image: url(assets/images/bg-completed-project.png)',
     class='md:h-[600px]'
   )
     .container.py-4
-      .text-center.text-pink-100(class='md:pt-48') OUR CASES
-      .text-center.text-2xl.font-bold.mt-4.mb-14 Completed Projects
+      h2.text-2xl.font-bold.text-center.text-pink-100(class='md:pt-48') OUR CASES
+      h3.text-3xl.text-center.font-bold.mt-4.mb-14 Completed Projects
       .relative
         section.grid.grid-cols-1.gap-5.left-0.right-0.z-10(class='md:grid-cols-3 md:gap-10 md:absolute')
           - var articleType2List = [{ title: 'Extra benefit through Invest', image: 'assets/images/completed-project01.png', desc: 'From banking and insurance to wealth management and on securities' }, { title: 'Extra benefit through Invest', image: 'assets/images/completed-project01.png',desc: 'From banking and insurance to wealth management and on securities' }, { title: 'Extra benefit through Invest', image: 'assets/images/completed-project01.png',desc: 'From banking and insurance to wealth management and on securities' }, ]
@@ -79,8 +78,8 @@ block content
     class='h-[400px] md:h-[1000px]'
   )
     .container.py-4
-      .text-center.text-2xl(class='md:pt-48') TRUST US
-      .text-center.text-2xl.font-bold.mt-4.mb-14 Entire World Trust us
+      h2.text-2xl.font-bold.text-center.text-pink-100(class='md:pt-48') TRUST US
+      h3.text-3xl.text-center.font-bold.mt-4.mb-14 Entire World Trust us
 
   .bg-cover.bg-center.bg-no-repeat.relative.w-full(
     style='background-image: url(assets/images/bg-statistical.png)'
@@ -99,10 +98,10 @@ block content
 
   .bg-gray-200
     .container.py-12
-      .text-center.text-pink-100.text-lg WE ARE HERE FOR
-      .text-center.text-4xl.font-bold.mt-4.mb-14 News
+      h2.text-2xl.font-bold.text-center.text-pink-100 WE ARE HERE FOR
+      h3.text-3xl.text-center.font-bold.mt-4.mb-14 News
       .relative
-        section.grid.grid-cols-1.gap-5(class='md:grid-cols-3 md:gap-10')
+        section.grid.grid-cols-1.gap-5(class='lg:grid-cols-3 md:gap-10')
           - var articleType2List = [{ title: 'Thiết kế website trọn gói giá rẻ', desc: 'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c', image: 'assets/images/news01.jpeg' }, { title: 'EDịch vụ seo top từ khóa Google uy tín', image: 'assets/images/news02.jpeg', desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }, { title: 'Công việc cần làm của dịch vụ SEO', image: 'assets/images/news03.jpeg',desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }]
           each item in articleType2List
             include /components/article-type2
@@ -112,7 +111,7 @@ block content
     style='background-image: url(assets/images/bg-statistical.png)'
   )
     .container.py-9
-      .text-center.text-4xl.font-bold.mt-4.mb-14 Business Partners
+      h3.text-3xl.text-center.font-bold.mt-4.mb-144 Business Partners
       .grid.grid-cols-3
         - var serviceList = [{ image: 'partner01.png', title: 'PVCB Capital'},{ image: 'partner02.png', title: 'PVComBank' },{ image: 'partner03.png', title: 'BD Law'},]
         each item, index in serviceList
@@ -120,6 +119,6 @@ block content
             .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full.transition.ease-in-out(
               class='hover:-translate-y-3'
             )
-              div(class='w-[62px] h-[62px]')
-                img.object-cover(src=`assets/images/${item.image}`, width='62px', height='62px')
+              div(class='w-[120px] h-[120px]')
+                img.object-cover(src=`assets/images/${item.image}`, width='120px', height='120px')
               .text-center.mt-4.text-blue-100.text-xl.font-bold(class='group-hover:font-bold')= item.title
