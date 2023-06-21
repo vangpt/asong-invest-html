@@ -9,14 +9,14 @@ block content
   +breadcrumb('Giới thiệu', 'banner02.png')
 
   .container
-    .my-14
-      .text-pink-100.text-2xl.font-bold.mb-5 Who We Are
+    .my-14.overflow-hidden
+      h3.text-pink-100.text-2xl.font-bold.mb-5 Who We Are
       .grid.grid-cols-1.gap-10(class='md:grid-cols-3')
         .col-span-1 ASONG INVEST is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.
         .col-span-1 When mobilizing our capital into investments, we will consider our investment actions on local social, economic, and environmental impacts alongside financial returns.
         .col-span-1.font-bold We hope to be a “Responsible Investor”, upholding the four key principals Sustainable Development Goals (SDGs) and respecting the Environmental, Social and Governance (ESG) frameworks.
 
-      iframe.mt-10.w-full.mx-auto(
+      iframe.mt-10.w-full.mx-auto(data-aos='fade-left')(
         src='https://www.youtube.com/embed/1MTkZPys7mU',
         frameborder='0',
         style='border: 0',
@@ -28,12 +28,12 @@ block content
         class='max-w-[600px]'
       )
 
-  .bg-gray-100.py-8
-    .container
-      .text-pink-100.text-2xl.font-bold.mt-8 ABOUT US
-      .grid.grid-cols-1.gap-10.mt-5(class='lg:grid-cols-3')
+  .bg-gray-100.py-8.overflow-hidden
+    .container(data-aos='fade-right')
+      h3.text-pink-100.text-2xl.font-bold.mt-8 ABOUT US
+      .grid.grid-cols-1.gap-10.mt-5(class='xl:grid-cols-3')
         .col-span-1
-          .font-bold.text-xl Our Mission & Focus
+          h3.font-bold.text-lg Our Mission & Focus
           br
           div Our mission is to find the right impact investments and nurture their potential growth in the right direction, leveraging our extensive local networks, deep industry relationships, and local investment partnerships.
           br
@@ -46,7 +46,7 @@ block content
           br
           div At ASONG INVEST, we do not invest in shares – we invest in future of Vietnam.
         .col-span-1
-          .font-bold.text-xl Our Philosophy
+          h3.font-bold.text-lg Our Philosophy
           br
           div Our investment philosophy is anchored on the belief that corporate Vietnam requires more than simple capital. We will be responsible for our investment actions, assisting corporate Vietnam to build globalized visions.
           br
@@ -54,7 +54,7 @@ block content
           br
           div Moreover. we wish to build and provide realistic motivations for the management and project leaders and work cordially with all concerned parties, aligning their goals and visions with those of company shareholders & investors.
         .col-span-1
-          .font-bold.text-xl Our Experienced Team & Business Partners
+          h3.font-bold.text-lg Our Experienced Team & Business Partners
           br
           div We will work in teams with our business partners looking for the right mix of skills, knowledge, and experience when approaching new potential investments.
           br
@@ -65,9 +65,9 @@ block content
           br
           div At ASONG, our seasoned professionals will work long-term with the management and project leaders.
 
-  .container
-    .my-14
-      .text-pink-100.text-2xl.font-bold.text-center OUR GREAT TEAM
+  .container.overflow-hidden
+    .my-14(data-aos='zoom-in-up')
+      h3.text-pink-100.text-2xl.font-bold.text-center OUR GREAT TEAM
       .grid.grid-cols-2(class='md:grid-cols-3')
         - var serviceList = [{ image: 'completed-project01.png', title: 'Sung Seung-Hoon Sung', subTitle:'Managing Partners' },{ image: 'completed-project01.png', title: 'Byun Jong-Jin (John)', subTitle:'Managing Partners' },{ image: 'completed-project01.png', title: 'Kim So-Yeun', subTitle:'Executive Director' },{ image: 'completed-project01.png', title: 'Hoang Thuy Le Duong', subTitle:'Executive Director' },{ image: 'completed-project01.png', title: 'Tran Hong Nhung', subTitle:'Directors' },{ image: 'completed-project01.png', title: 'Ng Ser Miang', subTitle:'Special Advisors' },]
         each item, index in serviceList
@@ -96,8 +96,8 @@ block content
                 img.object-cover(src=`assets/images/${item.image}`, width='62px', height='62px')
               .text-center.mt-4.text-blue-100.text-xl.font-bold(class='group-hover:font-bold')= item.title
 
-  .container.py-8
-    section.grid.grid-cols-1.gap-5(class='md:grid-cols-2 md:gap-10')
+  .container.py-8.overflow-hidden
+    section.grid.grid-cols-1.gap-5(class='md:grid-cols-2 md:gap-10')(data-aos='fade-left')
       - var articleType2List = [ { title: 'Mr. John Byun,', image: 'assets/images/completed-project01.png',desc1: 'Mr. Byun is the Managing Partner and CIO of ASONG INVEST. His primary responsibility is overseeing the execution of new investments and structuring the existing mechanism. When possible, he will also serve as a board member of the portfolio or project companies to closely monitor their operations and progress.', desc2: ' Mr. Byun brings 30 years of extensive experience in a commercial bank, securities firm, merchant bank, investment bank, and private equity investment from Australia, Hong Kong, and Korea. During this time, he advised, executed, and led the advisory team for many M&A transactions, NPL deals, corporate finance issuance, and real estate-related transactions. ', desc3: ' Mr. Byun received his BA in Business (Major in Finance) from the University of Technology Sydney.' },{ title: 'Mr. Seunghoon Sung', image: 'assets/images/news01.jpeg', desc1: 'Mr. Sung is the Managing Partner and CEO of ASONG INVEST. His primary responsibility is for deal origination and execution. He also oversees portfolio companies and projects day to day management. ',desc2: 'Before joining ASONG INVEST, Mr. Sung was CIO of Nemo Partners Investment & Consulting in Vietnam for eight years, heading up the advisory and consulting division for Infrastructure and Renewable Energy Industry. During his time with Kyungnam Enterprise, he was one of the key members involved in the planning, constructing, and managing the Hanoi’s largest landmark real estate project, “Kyugnam Tower’. He started his career as an Investment Analyst for Credit Agricole Corporate and Investment Bank., Seoul. ', desc3: 'Mr. Sung holds an MSc in International Labour Relationships from the London School of Economics and graduated with a BA in Business Administration from Korea University, Seoul.' },]
       each item in articleType2List
         include /components/article-type1
