@@ -34,7 +34,7 @@ const pagesInfo = [
     template: 'index.pug',
     chunks: [jsFile.home],
     build: true,
-    buildName: 'trang-chu.html',
+    buildName: 'index.html',
   },
   {
     title: 'About us',
