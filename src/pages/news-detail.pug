@@ -45,7 +45,7 @@ block content
 
       .text-xl.font-semibold.pb-4.border-b-2 Other News
 
-      section.grid.grid-cols-1.gap-5.mt-4(class='lg:grid-cols-3 md:gap-10')(data-aos='fade-right')
+      section.grid.grid-cols-1.gap-5.mt-4(class='lg:grid-cols-3 md:gap-10')
         - var articleType2List = [{ title: 'Thiết kế website trọn gói giá rẻ', desc: 'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c', image: 'assets/images/news01.jpeg' }, { title: 'EDịch vụ seo top từ khóa Google uy tín', image: 'assets/images/news02.jpeg', desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }, { title: 'Công việc cần làm của dịch vụ SEO', image: 'assets/images/news03.jpeg',desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }]
         each item in articleType2List
           include /components/article-type2

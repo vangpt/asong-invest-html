@@ -10,7 +10,7 @@ block content
 
   .container
     .flex.flex-col-reverse.gap-10.my-14(class='lg:grid lg:grid-cols-2')
-      .col-span-1
+      .col-span-1(data-aos='fade-right')
         iframe(
           src='https://www.youtube.com/embed/1MTkZPys7mU',
           frameborder='0',
@@ -21,7 +21,7 @@ block content
           width='100%',
           height='367px'
         )
-      .col-span-1
+      .col-span-1(data-aos='fade-left')
         div
           h2.text-2xl.font-bold.text-primary.text-xl ABOUT US
           h3.text-2xl.font-bold.mt-3 We are the largest Business expert in
@@ -63,11 +63,13 @@ block content
     style='background-image: url(assets/images/bg-completed-project.png)',
     class='md:h-[600px]'
   )
-    .container.py-4(data-aos='zoom-in')
+    .container.py-4
       h2.text-2xl.font-bold.text-center.text-pink-100(class='md:pt-48') OUR CASES
       h3.text-3xl.text-center.font-bold.mt-4.mb-14 Completed Projects
       .relative
-        section.grid.grid-cols-1.gap-5.left-0.right-0.z-10(class='md:grid-cols-3 md:gap-10 md:absolute')
+        section.grid.grid-cols-1.gap-5.left-0.right-0.z-10(class='md:grid-cols-3 md:gap-10 md:absolute')(
+          data-aos='fade-right'
+        )
           - var articleType2List = [{ title: 'Extra benefit through Invest', image: 'assets/images/completed-project01.png', desc: 'From banking and insurance to wealth management and on securities' }, { title: 'Extra benefit through Invest', image: 'assets/images/completed-project01.png',desc: 'From banking and insurance to wealth management and on securities' }, { title: 'Extra benefit through Invest', image: 'assets/images/completed-project01.png',desc: 'From banking and insurance to wealth management and on securities' }, ]
           each item in articleType2List
             include /components/article-type2
