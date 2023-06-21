@@ -41,11 +41,11 @@ block content
 
     //- style='background-image: url(assets/images/bg-service.png)'
   .bg-cover.bg-center.bg-no-repeat.relative.w-full
-    .container.py-24
+    .container.py-24.overflow-hidden
       h2.text-2xl.font-bold.text-center.text-pink-100 SERVICE AREAS
       h3.text-3xl.text-center.font-bold.my-4 Services we serve to you
       .text-center From banking and insurance to wealth management and on securities distribution, we dedicated financial services them the teams serve all major sectors. of the industry.
-      .grid.my-14.grid-cols-6
+      .grid.my-14.grid-cols-6(data-aos='zoom-out')
         - var serviceList = [{ image: 'service01.png', title: 'Retirement Planning' },{ image: 'service02.png', title: 'Home and Business Loan' },{ image: 'service03.png', title: 'Business Consultation' },{ image: 'service04.png', title: 'Saving and Strategy' },{ image: 'service05.png', title: 'Life & Health Insurance' },{ image: 'service06.png', title: 'Banking and Financial' }]
         each item, index in serviceList
           .col-span-3.border-l.group(class='first:border-0 md:col-span-2 lg:col-span-1')(
@@ -63,7 +63,7 @@ block content
     style='background-image: url(assets/images/bg-completed-project.png)',
     class='md:h-[600px]'
   )
-    .container.py-4
+    .container.py-4(data-aos='zoom-in')
       h2.text-2xl.font-bold.text-center.text-pink-100(class='md:pt-48') OUR CASES
       h3.text-3xl.text-center.font-bold.mt-4.mb-14 Completed Projects
       .relative
@@ -81,10 +81,10 @@ block content
       h2.text-2xl.font-bold.text-center.text-pink-100(class='md:pt-48') TRUST US
       h3.text-3xl.text-center.font-bold.mt-4.mb-14 Entire World Trust us
 
-  .bg-cover.bg-center.bg-no-repeat.relative.w-full(
+  .bg-cover.bg-center.bg-no-repeat.relative.w-full.overflow-hidden(
     style='background-image: url(assets/images/bg-statistical.png)'
   )
-    .container.py-9
+    .container.py-9(data-aos='fade-left')
       .grid.grid-cols-4
         - var serviceList = [{ image: 'statistical01.png', title: '450+ Projects', subTitle:'Completed' },{ image: 'statistical02.png', title: '560+ Trusted',subTitle: 'Client’s' },{ image: 'statistical03.png', title: '100% Client',subTitle: 'Satisfaction'},{ image: 'statistical04.png', title: '3 Billion USD',subTitle: 'Profit' }]
         each item, index in serviceList
@@ -97,7 +97,7 @@ block content
               .text-center.text-xl.font-bold.text-pink-100(class='group-hover:font-bold')= item.subTitle
 
   .bg-gray-200
-    .container.py-12
+    .container.py-12(data-aos='fade-right')
       h2.text-2xl.font-bold.text-center.text-pink-100 WE ARE HERE FOR
       h3.text-3xl.text-center.font-bold.mt-4.mb-14 News
       .relative
@@ -110,14 +110,11 @@ block content
   .bg-cover.bg-center.bg-no-repeat.relative.w-full(
     style='background-image: url(assets/images/bg-statistical.png)'
   )
-    .container.py-9
+    .container.py-9.overflow-hidden
       h3.text-3xl.text-center.font-bold.mt-4.mb-144 Business Partners
-      .flex.flex-col.justify-center(class='md:flex-row')
+      .flex.flex-row.justify-center(data-aos='zoom-out')
         - var serviceList = [{ image: 'partner01.png', title: 'PVCB Capital'},{ image: 'partner02.png', title: 'PVComBank' },{ image: 'partner03.png', title: 'BD Law'},]
         each item, index in serviceList
-          div(class='lg:px-14 md:px-6')
-            .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full.transition.ease-in-out(
-              class='hover:-translate-y-3'
-            )
-              div(class='w-[160px] h-[160px]')
-                img.object-cover(src=`assets/images/${item.image}`)(class='w-[160px] h-[160px]')
+          .flex.flex-col.items-center.cursor-pointer.p-4.h-full(class='md:p-8')
+            div(class='max-w-[160px] max-h-[160px]')
+              img.object-cover(src=`assets/images/${item.image}`)

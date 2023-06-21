@@ -11,7 +11,7 @@ mixin articleType2(title, image ,desc, isNews)
         )
 
       .p-4.pt-2(class='lg:p-5')
-        .font-bold.text-lg.c-transition.line-clamp-2(class='hover:text-primary')= title
+        h3.font-bold.text-lg.c-transition.line-clamp-2(class='hover:text-primary')= title
         .text-sm.my-4= desc
         div
           if (isNews)

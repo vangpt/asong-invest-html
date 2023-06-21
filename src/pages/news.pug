@@ -10,14 +10,16 @@ block content
 
   .container
     .my-14
-      section.grid.grid-cols-1.gap-5.my-8(class='md:grid-cols-2 lg:grid-cols-3 md:gap-10')
+      section.grid.grid-cols-1.gap-5.my-8(class='md:grid-cols-2 lg:grid-cols-3 md:gap-10')(
+        data-aos='fade-left'
+      )
         - var articleType2List = [{ title: 'Thiết kế website trọn gói giá rẻ', desc: 'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c', image: 'assets/images/news01.jpeg' }, { title: 'EDịch vụ seo top từ khóa Google uy tín', image: 'assets/images/news02.jpeg', desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }, { title: 'Công việc cần làm của dịch vụ SEO', image: 'assets/images/news03.jpeg',desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' },{ title: 'Thiết kế website trọn gói giá rẻ', desc: 'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c', image: 'assets/images/news01.jpeg' }, { title: 'EDịch vụ seo top từ khóa Google uy tín', image: 'assets/images/news02.jpeg', desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }, { title: 'Công việc cần làm của dịch vụ SEO', image: 'assets/images/news03.jpeg',desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' },{ title: 'Thiết kế website trọn gói giá rẻ', desc: 'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c', image: 'assets/images/news01.jpeg' }, { title: 'EDịch vụ seo top từ khóa Google uy tín', image: 'assets/images/news02.jpeg', desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }, { title: 'Công việc cần làm của dịch vụ SEO', image: 'assets/images/news03.jpeg',desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }]
         each item in articleType2List
           include /components/article-type2
           +articleType2(item.title, item.image, item.desc, true)
       .text-xl.font-semibold.mb-4 Other News
 
-      ul.list-disc.pl-5.py-4.border-t-2
+      ul.list-disc.pl-5.py-4.border-t-2(data-aos='fade-right')
         li.mb-2 Thiết kế website trọn gói giá rẻ 22/07/2022
         li.mb-2 Dịch vụ seo top từ khóa Google uy tín 22/07/2022
         li.mb-2 Công việc cần làm của dịch vụ SEO 22/07/2022
