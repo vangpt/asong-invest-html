@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   for (let i = 0; i < listNavItemHeader.length; i++) {
     if (listNavItemHeader[i].getAttribute('href') === window.location.pathname) {
-      listNavItemHeader[i].classList.add('text-primary')
+      listNavItemHeader[i].classList.add('border-primary')
     }
   }
 

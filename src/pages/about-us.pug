@@ -10,7 +10,7 @@ block content
 
   .container.overflow-hidden
     .my-14(data-aos='fade-left')
-      h3.text-pink-100.text-2xl.font-bold.mb-5 Who We Are
+      h3.text-primary.text-2xl.font-bold.mb-5 Who We Are
       .grid.grid-cols-1.gap-10(class='md:grid-cols-3')
         .col-span-1 Company Name is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.
         .col-span-1 When mobilizing our capital into investments, we will consider our investment actions on local social, economic, and environmental impacts alongside financial returns.
@@ -30,7 +30,7 @@ block content
 
   .bg-gray-100.py-8.overflow-hidden
     .container(data-aos='fade-right')
-      h3.text-pink-100.text-2xl.font-bold.mt-8 ABOUT US
+      h3.text-primary.text-2xl.font-bold.mt-8 ABOUT US
       .grid.grid-cols-1.gap-10.mt-5(class='xl:grid-cols-3')
         .col-span-1
           h3.font-bold.text-lg Our Mission & Focus
@@ -67,7 +67,7 @@ block content
 
   .container.overflow-hidden
     .my-14(data-aos='zoom-in-up')
-      h3.text-pink-100.text-2xl.font-bold.text-center OUR GREAT TEAM
+      h3.text-primary.text-2xl.font-bold.text-center OUR GREAT TEAM
       .grid.grid-cols-2(class='md:grid-cols-3')
         - var serviceList = [{ image: 'completed-project01.png', title: 'Sung Seung-Hoon Sung', subTitle:'Managing Partners' },{ image: 'completed-project01.png', title: 'Byun Jong-Jin (John)', subTitle:'Managing Partners' },{ image: 'completed-project01.png', title: 'Kim So-Yeun', subTitle:'Executive Director' },{ image: 'completed-project01.png', title: 'Hoang Thuy Le Duong', subTitle:'Executive Director' },{ image: 'completed-project01.png', title: 'Tran Hong Nhung', subTitle:'Directors' },{ image: 'completed-project01.png', title: 'Ng Ser Miang', subTitle:'Special Advisors' },]
         each item, index in serviceList
@@ -78,7 +78,7 @@ block content
                   class='w-[140px] h-[140px] hover:scale-125'
                 )
               .text-center.mt-4.text-blue-100.text-xl= item.title
-              i.text-center.text-lg.text-pink-100.font-light= item.subTitle
+              i.text-center.text-lg.text-primary.font-light= item.subTitle
 
   //- .bg-cover.bg-center.bg-no-repeat.relative.w-full(
   //-   style='background-image: url(assets/images/bg-statistical.png)'
