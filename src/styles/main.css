@@ -24,3 +24,7 @@
 #nav-sp.active {
   left: 0;
 }
+
+.transition-header {
+  transition: 0.3s ease;
+}

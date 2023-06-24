@@ -8,8 +8,8 @@ window.addEventListener('DOMContentLoaded', function () {
   const listNavItemHeader = doc.querySelectorAll('.nav-item-header')
 
   for (let i = 0; i < listNavItemHeader.length; i++) {
-    if (listNavItemHeader[i].getAttribute('href') === window.location.pathname) {
-      listNavItemHeader[i].classList.add('border-primary')
+    if (listNavItemHeader[i].childNodes[0].getAttribute('href') === window.location.pathname) {
+      listNavItemHeader[i].classList.add('border-primary', 'pb-1')
     }
   }
 
