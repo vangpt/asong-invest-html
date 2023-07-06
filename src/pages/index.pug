@@ -67,13 +67,15 @@ block content
       h2.text-2xl.font-bold.text-center.text-primary(class='md:pt-48') OUR CASES
       h3.text-3xl.text-center.font-bold.mt-4.mb-14 Completed Projects
       .relative
-        section.grid.grid-cols-1.gap-5.left-0.right-0.z-10(class='md:grid-cols-3 md:gap-10 md:absolute')(
+        section.grid.grid-cols-1.gap-5.left-0.right-0.z-10.mx-auto(
+          class='md:grid-cols-2 md:gap-10 md:absolute lg:w-3/5'
+        )(
           data-aos='fade-right'
         )
-          - var articleType2List = [{ title: 'Extra benefit through Invest', image: 'assets/images/completed-project01.png', desc: 'From banking and insurance to wealth management and on securities' }, { title: 'Extra benefit through Invest', image: 'assets/images/completed-project01.png',desc: 'From banking and insurance to wealth management and on securities' }, { title: 'Extra benefit through Invest', image: 'assets/images/completed-project01.png',desc: 'From banking and insurance to wealth management and on securities' }, ]
+          - var articleType2List = [{ title:'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link:'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023'},{ title:'Asong Invest, Noble và PVCB Capital ký kết MOU về Quỹ năng lượng tái tạo', link:'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html', desc: 'Ngày 23/6/2023, tại Hà Nội, công ty TNHH Asong Invest (viết tắt là Asong Invest), công ty TNHH Noble (Việt Nam) (viết tắt là Noble) và công ty Cổ phần Quản lý Quỹ Ngân hàng TMCP Đại chúng Việt Nam (viết tắt là PVCB Capital) đã ký kết biên bản ghi nhớ về hợp tác chung trong việc thành lập "Quỹ đầu tư tăng trưởng xanh PV-Asong".', image: 'assets/images/news/news-1.2.png', date: '23/06/2023'}]
           each item in articleType2List
             include /components/article-type2
-            +articleType2(item.title, item.image, item.desc)
+            +articleType2(item.title, item.image, item.desc, false, item.link)
 
   .bg-contain.bg-center.bg-no-repeat.relative.w-full(
     style='background-image: url(assets/images/map-earth.png)',
@@ -104,10 +106,10 @@ block content
       h3.text-3xl.text-center.font-bold.mt-4.mb-14 News
       .relative
         section.grid.grid-cols-1.gap-5(class='lg:grid-cols-3 md:gap-10')
-          - var articleType2List = [{ title: 'Thiết kế website trọn gói giá rẻ', desc: 'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c', image: 'assets/images/news01.jpeg' }, { title: 'EDịch vụ seo top từ khóa Google uy tín', image: 'assets/images/news02.jpeg', desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }, { title: 'Công việc cần làm của dịch vụ SEO', image: 'assets/images/news03.jpeg',desc:'Dịch vụ seo top từ khóa Google uy tín là một trong những dịch vụ SEO tối ưu website thân thiện với c' }]
+          - var articleType2List = [{ title:'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training', link:'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html', desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.', image: 'assets/images/news/news-3.1.png', date: '09/12/2022'},{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'ny Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:'Nemo Partners introduces Korean spiritual gastronomy featuring revered chef Jeong Kwan', link:'nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.html', desc: 'Culinary guide So Yeon Kim, Director at Nemo Partners, introduced the third year of Korean Gastronomy Week in Hanoi, in collaboration with the "Philosopher Chef" Jeong Kwan.', image: 'assets/images/news/news-5.1.png', date: '29/10/2022'}]
           each item in articleType2List
             include /components/article-type2
-            +articleType2(item.title, item.image, item.desc, true)
+            +articleType2(item.title, item.image, item.desc, true, item.link, item.date)
 
   .bg-cover.bg-center.bg-no-repeat.relative.w-full(
     style='background-image: url(assets/images/bg-statistical.png)'
