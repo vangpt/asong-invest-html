@@ -71,61 +71,65 @@ const pagesInfo = [
   {
     title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund',
     filename: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html',
-    template: 'news-detail-1.pug',
+    template: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'news-detail-1.pug',
+    buildName: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.pug',
   },
   {
     title: 'Asong Invest, Noble và PVCB Capital ký kết MOU về Quỹ năng lượng tái tạo',
     filename: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html',
-    template: 'news-detail-2.pug',
+    template: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'news-detail-2.pug',
+    buildName: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.pug',
   },
   {
     title:
       'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training',
     filename:
       'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html',
-    template: 'news-detail-3.pug',
+    template:
+      'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'news-detail-3.pug',
+    buildName:
+      'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.pug',
   },
   {
     title: 'Vietnamese athletes to get $1M bonus for Olympic gold medal',
     filename: 'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html',
-    template: 'news-detail-4.pug',
+    template: 'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'news-detail-4.pug',
+    buildName: 'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.pug',
   },
   {
     title: 'Nemo Partners introduces Korean spiritual gastronomy featuring revered chef Jeong Kwan',
     filename:
       'nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.html',
-    template: 'news-detail-5.pug',
+    template:
+      'nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'news-detail-5.pug',
+    buildName:
+      'nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.pug',
   },
   {
     title: "Nemo-PVcom Merit Fund eyes int'l investors",
     filename: 'nemo-pvcom-merit-fund-eyes-int-l-investors.html',
-    template: 'news-detail-6.pug',
+    template: 'nemo-pvcom-merit-fund-eyes-int-l-investors.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'news-detail-6.pug',
+    buildName: 'nemo-pvcom-merit-fund-eyes-int-l-investors.pug',
   },
   {
     title: 'Quỹ đầu tư giá trị Nemo - PVcom hoàn thành vòng gọi vốn ban đầu',
     filename: 'quy-dau-tu-gia-tri-nemo-pvcom-hoan-thanh-vong-goi-von-ban-dau.html',
-    template: 'news-detail-7.pug',
+    template: 'quy-dau-tu-gia-tri-nemo-pvcom-hoan-thanh-vong-goi-von-ban-dau.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'news-detail-7.pug',
+    buildName: 'quy-dau-tu-gia-tri-nemo-pvcom-hoan-thanh-vong-goi-von-ban-dau.pug',
   },
 ]
 
