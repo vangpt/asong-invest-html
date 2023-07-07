@@ -74,7 +74,7 @@ const pagesInfo = [
     template: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.pug',
+    buildName: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html',
   },
   {
     title: 'Asong Invest, Noble và PVCB Capital ký kết MOU về Quỹ năng lượng tái tạo',
@@ -82,7 +82,7 @@ const pagesInfo = [
     template: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.pug',
+    buildName: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html',
   },
   {
     title:
@@ -94,7 +94,7 @@ const pagesInfo = [
     chunks: [jsFile.newsDetail],
     build: true,
     buildName:
-      'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.pug',
+      'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html',
   },
   {
     title: 'Vietnamese athletes to get $1M bonus for Olympic gold medal',
@@ -102,7 +102,7 @@ const pagesInfo = [
     template: 'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.pug',
+    buildName: 'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html',
   },
   {
     title: 'Nemo Partners introduces Korean spiritual gastronomy featuring revered chef Jeong Kwan',
@@ -113,7 +113,7 @@ const pagesInfo = [
     chunks: [jsFile.newsDetail],
     build: true,
     buildName:
-      'nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.pug',
+      'nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.html',
   },
   {
     title: "Nemo-PVcom Merit Fund eyes int'l investors",
@@ -121,7 +121,7 @@ const pagesInfo = [
     template: 'nemo-pvcom-merit-fund-eyes-int-l-investors.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'nemo-pvcom-merit-fund-eyes-int-l-investors.pug',
+    buildName: 'nemo-pvcom-merit-fund-eyes-int-l-investors.html',
   },
   {
     title: 'Quỹ đầu tư giá trị Nemo - PVcom hoàn thành vòng gọi vốn ban đầu',
@@ -129,7 +129,7 @@ const pagesInfo = [
     template: 'quy-dau-tu-gia-tri-nemo-pvcom-hoan-thanh-vong-goi-von-ban-dau.pug',
     chunks: [jsFile.newsDetail],
     build: true,
-    buildName: 'quy-dau-tu-gia-tri-nemo-pvcom-hoan-thanh-vong-goi-von-ban-dau.pug',
+    buildName: 'quy-dau-tu-gia-tri-nemo-pvcom-hoan-thanh-vong-goi-von-ban-dau.html',
   },
 ]
 
