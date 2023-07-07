@@ -6,7 +6,7 @@ block title
 
 block content
   include /components/breadcrumb
-  +breadcrumb('Tin tức', 'banner02.png')
+  +breadcrumb('news', 'banner02.png')
 
   .container
     .my-14
@@ -52,3 +52,10 @@ block content
       p.mb-5 Korean Gastronomy Week 2022 is hosted by the Ministry of Agriculture, Korea Forest Service, and Korea Agro-Fisheries and Food Trade Corporation, with organization by Nemo Partners.
 
       p.mb-5 Nemo Partners is the one of the largest investment and advisory firms in Korea, driving business opportunities between Korea and Vietnam. Korean Gastronomy Week Hanoi is an annual event organized by Nemo Partners to introduce elevated Korean culinary culture to Vietnam.
+
+      .text-xl.font-semibold.pb-4.border-b-2 Other News
+      section.grid.grid-cols-1.gap-5.my-8(class='md:grid-cols-2 lg:grid-cols-3 md:gap-10')
+        - var articleType2List = [{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'ny Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training', link:'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html', desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.', image: 'assets/images/news/news-3.1.png', date: '09/12/2022'},{ title:'Quỹ đầu tư giá trị Nemo - PVcom hoàn thành vòng gọi vốn ban đầu', link:'quy-dau-tu-gia-tri-nemo-pvcom-hoan-thanh-vong-goi-von-ban-dau.html', desc: 'Quỹ đầu tư giá trị Nemo - PVcom Merit Fund (NPMF) đã chính thức hoàn thành vòng gọi vốn ban đầu, đồng thời đặt mục tiêu huy động nguồn vốn lên tới 20 – 50 triệu USD từ các Nhà đầu tư Quốc tế trong năm 2022 và 2023.', image: 'assets/images/news/news-6.1.png', date: '22/02/2022'}]
+        each item in articleType2List
+          include /components/article-type2
+          +articleType2(item.title, item.image, item.desc, true, item.link, item.date)

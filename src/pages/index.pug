@@ -11,27 +11,14 @@ block content
   .container
     .flex.flex-col-reverse.gap-10.my-14(class='lg:grid lg:grid-cols-2')
       .col-span-1(data-aos='fade-right')
-        iframe(
-          src='https://www.youtube.com/embed/1MTkZPys7mU',
-          frameborder='0',
-          style='border: 0',
-          allowfullscreen='',
-          loading='lazy',
-          referrerpolicy='no-referrer-when-downgrade',
-          width='100%',
-          height='367px'
-        )
+        video(width='100%', controls)
+          source(src='assets/video.mp4', type='video/mp4')
+          Your browser does not support the video tag.
       .col-span-1(data-aos='fade-left')
         div
           h2.text-2xl.font-bold.text-primary.text-xl ABOUT US
           h3.text-2xl.font-bold.mt-3 We are the largest Business expert in
           .text-3xl.font-bold.my-5 Europe and Asia
-          .flex.mt-6
-            .mr-5(class='w-[62px]')
-              img(src='assets/images/about-01.png')
-            .flex-grow.flex-1
-              .text-sm.font-bold.mb-1 Extra benefit through Invest
-              div From banking and insurance to wealth management and securities distribution, we dedicated financial
           .flex.mt-6
             .mr-5(class='w-[62px]')
               img(src='assets/images/about-01.png')
@@ -106,7 +93,7 @@ block content
       h3.text-3xl.text-center.font-bold.mt-4.mb-14 News
       .relative
         section.grid.grid-cols-1.gap-5(class='lg:grid-cols-3 md:gap-10')
-          - var articleType2List = [{ title:'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training', link:'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html', desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.', image: 'assets/images/news/news-3.1.png', date: '09/12/2022'},{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'ny Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:'Nemo Partners introduces Korean spiritual gastronomy featuring revered chef Jeong Kwan', link:'nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.html', desc: 'Culinary guide So Yeon Kim, Director at Nemo Partners, introduced the third year of Korean Gastronomy Week in Hanoi, in collaboration with the "Philosopher Chef" Jeong Kwan.', image: 'assets/images/news/news-5.1.png', date: '29/10/2022'}]
+          - var articleType2List = [{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'ny Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training', link:'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html', desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.', image: 'assets/images/news/news-3.1.png', date: '09/12/2022'},{ title:'Nemo Partners introduces Korean spiritual gastronomy featuring revered chef Jeong Kwan', link:'nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.html', desc: 'Culinary guide So Yeon Kim, Director at Nemo Partners, introduced the third year of Korean Gastronomy Week in Hanoi, in collaboration with the "Philosopher Chef" Jeong Kwan.', image: 'assets/images/news/news-5.1.png', date: '29/10/2022'}]
           each item in articleType2List
             include /components/article-type2
             +articleType2(item.title, item.image, item.desc, true, item.link, item.date)

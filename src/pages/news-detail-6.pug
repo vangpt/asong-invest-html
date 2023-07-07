@@ -6,7 +6,7 @@ block title
 
 block content
   include /components/breadcrumb
-  +breadcrumb('Tin tức', 'banner02.png')
+  +breadcrumb('news', 'banner02.png')
 
   .container
     .my-14
@@ -40,3 +40,10 @@ block content
       p.mb-5 The founding members of NPMF include PVcomBank Fund Management JSC (PVCB Capital), Nemo Partners Vietnam Investment and Consulting Co., Ltd and international investors.
 
       p.mb-5 JPVCB Capital is a member of Vietnam Public Commercial Joint Stock Bank (PVcomBank), with assets under management of approximately $800 million, providing institutional and individual clients with various types of investment advisory services, fund management and portfolio management.
+
+      .text-xl.font-semibold.pb-4.border-b-2 Other News
+      section.grid.grid-cols-1.gap-5.my-8(class='md:grid-cols-2 lg:grid-cols-3 md:gap-10')
+        - var articleType2List = [{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'ny Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training', link:'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html', desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.', image: 'assets/images/news/news-3.1.png', date: '09/12/2022'},{ title:'Nemo Partners introduces Korean spiritual gastronomy featuring revered chef Jeong Kwan', link:'nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.html', desc: 'Culinary guide So Yeon Kim, Director at Nemo Partners, introduced the third year of Korean Gastronomy Week in Hanoi, in collaboration with the "Philosopher Chef" Jeong Kwan.', image: 'assets/images/news/news-5.1.png', date: '29/10/2022'}]
+        each item in articleType2List
+          include /components/article-type2
+          +articleType2(item.title, item.image, item.desc, true, item.link, item.date)
