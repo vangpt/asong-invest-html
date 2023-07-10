@@ -17,7 +17,7 @@ const jsFile = {
   aboutUs: 'aboutUs',
   contact: 'contact',
   news: 'news',
-  newsDetail: 'news-detail',
+  newsDetail: 'news/news-detail',
 }
 
 // Define entry for webpack
@@ -87,8 +87,9 @@ const pagesInfo = [
   {
     title:
       'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training',
+    isNewDetail: true,
     filename:
-      'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html',
+      'news/international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html',
     template:
       'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.pug',
     chunks: [jsFile.newsDetail],
@@ -138,7 +139,9 @@ const htmlWebpackPlugins = pagesInfo.map(
   (page) =>
     new HtmlWebpackPlugin({
       title: page.title,
-      template: `${paths.src}/pages/${page.template}`,
+      template: page?.isNewDetail
+        ? `${paths.src}/pages/news/${page.template}`
+        : `${paths.src}/pages/${page.template}`,
       filename: page.filename,
       chunks: [jsFile.main, ...page.chunks],
       publicPath: './',
