@@ -1,0 +1,9 @@
+mixin ourTeam(title, image ,desc, idMember)
+  .our-team.col-span-1.group(class='first:border-0')(id=idMember)
+    .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full
+      .overflow-hidden.rounded-full(class='w-[140px] h-[140px]')
+        img.rounded-full.object-cover.c-transition(src=`assets/images/team/${item.image}`)(
+          class='w-[140px] h-[140px]'
+        )
+      .text-center.mt-4.text-blue-100.text-xl= item.title
+      .text-center.text-lg.text-primary.font-light= item.subTitle

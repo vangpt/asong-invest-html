@@ -14,7 +14,7 @@ block content
       .grid.grid-cols-1.gap-10(class='md:grid-cols-3')
         .col-span-1 ASONG INVEST is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.
         .col-span-1 When mobilizing our capital into investments, we will consider our investment actions on local social, economic, and environmental impacts alongside financial returns.
-        .col-span-1.font-bold We hope to be a “Responsible Investor”, upholding the four key principals Sustainable Development Goals (SDGs) and respecting the Environmental, Social and Governance (ESG) frameworks.
+        .col-span-1.font-bold WE WILL BE A RESOPONSIBLE INVESTOR, upholding the four key principals Sustainable Development Goals (SDGs) and respecting the Environmental, Social and Governance (ESG) frameworks.
 
       video.mx-auto.mt-8(width='100%', controls)(class='max-w-[800px]')
         source(src='assets/video.mp4', type='video/mp4')
@@ -27,16 +27,12 @@ block content
         .col-span-1
           h3.font-bold.text-lg Our Mission & Focus
           br
-          div Our mission is to find the right impact investments and nurture their potential growth in the right direction, leveraging our extensive local networks, deep industry relationships, and local investment partnerships.
-          br
           div We will primarily focus on making impact investments in controlling or significant minority stakes in the traditional and alternative asset classes, including:
           ul.list-disc.pl-5
-            li.font-medium Real Estate Development,
-            li.font-medium Sports Infrastructure,
-            li.font-medium NPL Assets
-            li.font-medium Private Equities for “SEO Assets Sales” and “Renewable Energy”.
-          br
-          div At ASONG INVEST, we do not invest in shares – we invest in future of Vietnam.
+            li.font-medium Renewable Energy,
+            li.font-medium Sports, Culture & Tourism Infrastructure,
+            li.font-medium Equitization of State-Owned Enterprises,
+            li.font-medium Real-Estate NPLs.
         .col-span-1
           h3.font-bold.text-lg Our Philosophy
           br
@@ -57,40 +53,35 @@ block content
           br
           div At ASONG, our seasoned professionals will work long-term with the management and project leaders.
 
-  .container.overflow-hidden
-    .my-14(data-aos='zoom-in-up')
-      h3.text-primary.text-2xl.font-bold.text-center OUR GREAT TEAM
-      .grid.grid-cols-2(class='md:grid-cols-3')
-        - var serviceList = [{ image: 'completed-project01.png', title: 'Sung Seung-Hoon Sung', subTitle:'Managing Partners' },{ image: 'completed-project01.png', title: 'Byun Jong-Jin (John)', subTitle:'Managing Partners' },{ image: 'completed-project01.png', title: 'Kim So-Yeun', subTitle:'Executive Director' },{ image: 'completed-project01.png', title: 'Hoang Thuy Le Duong', subTitle:'Executive Director' },{ image: 'completed-project01.png', title: 'Tran Hong Nhung', subTitle:'Directors' },{ image: 'completed-project01.png', title: 'Ng Ser Miang', subTitle:'Special Advisors' },]
-        each item, index in serviceList
-          .col-span-1.group(class='first:border-0')
-            .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full
-              .overflow-hidden.rounded-full(class='w-[140px] h-[140px]')
-                img.rounded-full.object-cover.c-transition(src=`assets/images/${item.image}`)(
-                  class='w-[140px] h-[140px] hover:scale-125'
-                )
-              .text-center.mt-4.text-blue-100.text-xl= item.title
-              i.text-center.text-lg.text-primary.font-light= item.subTitle
+  #our-team.container.overflow-hidden
+    .my-14
+      h3.text-primary.text-2xl.font-bold.text-center OUR TEAM
+        .swiper.group(data-aos='zoom-in-up')
+          .swiper-wrapper
+            - var ourTeam = [{ id: 'young-kyu-lim', image: 'youngkyu-lim.png', title: 'Young Kyu Lim', subTitle:'Special Advisors',},{id: 'byun-jong-jin', image: 'john-byun.png', title: 'Byun Jong-Jin (John)', subTitle:'Managing Partners' },{ id: 'sung-seung-hoon-sung', image: 'sung-seung-hoon.png', title: 'Sung Seung-Hoon Sung', subTitle:'Managing Partners' },{id: 'kim-so-yeun', image: 'kim-so-yeon.png', title: 'Kim So-Yeun', subTitle:'Executive Director' },{  id: 'hoang-le-thuy-duong',image: 'thuy-duong.png', title: 'Hoàng Lê Thùy Dương', subTitle:'Executive Director' },{id:'tran-hong-nhung', image: 'tran-hong-nhung.png', title: 'Trần Hồng Nhung', subTitle:'Directors'},]
+            each item, index in ourTeam
+              .swiper-slide
+                include /components/our-team
+                +ourTeam(item.title, item.image, item.description, item.id)
 
-  //- .bg-cover.bg-center.bg-no-repeat.relative.w-full(
-  //-   style='background-image: url(assets/images/bg-statistical.png)'
-  //- )
-    .container.py-9
-      .text-center.text-4xl.font-bold.mt-4.mb-14 Business Partners
-      .grid.grid-cols-3
-        - var serviceList = [{ image: 'partner01.png', title: 'PVCB Capital'},{ image: 'partner02.png', title: 'PVComBank' },{ image: 'partner03.png', title: 'BD Law'},]
-        each item, index in serviceList
-          .col-span-3.group(class='first:border-0 md:col-span-1')
-            .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full.transition.ease-in-out(
-              class='hover:-translate-y-3'
-            )
-              div(class='w-[62px] h-[62px]')
-                img.object-cover(src=`assets/images/${item.image}`, width='62px', height='62px')
-              .text-center.mt-4.text-blue-100.text-xl.font-bold(class='group-hover:font-bold')= item.title
+          #next-status.right-0.btn-navigation
+            i.icon.icon-chevron_right
 
-  .container.py-8.overflow-hidden
-    section.grid.grid-cols-1.gap-5(class='md:grid-cols-2 md:gap-10')(data-aos='fade-left')
-      - var articleType2List = [ { title: 'Mr. John Byun,', image: 'assets/images/completed-project01.png',desc1: 'Mr. Byun is the Managing Partner and CIO of ASONG INVEST. His primary responsibility is overseeing the execution of new investments and structuring the existing mechanism. When possible, he will also serve as a board member of the portfolio or project companies to closely monitor their operations and progress.', desc2: ' Mr. Byun brings 30 years of extensive experience in a commercial bank, securities firm, merchant bank, investment bank, and private equity investment from Australia, Hong Kong, and Korea. During this time, he advised, executed, and led the advisory team for many M&A transactions, NPL deals, corporate finance issuance, and real estate-related transactions. ', desc3: ' Mr. Byun received his BA in Business (Major in Finance) from the University of Technology Sydney.' },{ title: 'Mr. Seunghoon Sung', image: 'assets/images/news01.jpeg', desc1: 'Mr. Sung is the Managing Partner and CEO of ASONG INVEST. His primary responsibility is for deal origination and execution. He also oversees portfolio companies and projects day to day management. ',desc2: 'Before joining ASONG INVEST, Mr. Sung was CIO of Nemo Partners Investment & Consulting in Vietnam for eight years, heading up the advisory and consulting division for Infrastructure and Renewable Energy Industry. During his time with Kyungnam Enterprise, he was one of the key members involved in the planning, constructing, and managing the Hanoi’s largest landmark real estate project, “Kyugnam Tower’. He started his career as an Investment Analyst for Credit Agricole Corporate and Investment Bank., Seoul. ', desc3: 'Mr. Sung holds an MSc in International Labour Relationships from the London School of Economics and graduated with a BA in Business Administration from Korea University, Seoul.' },]
-      each item in articleType2List
-        include /components/article-type1
-        +articleType1(item.title, item.image, item.desc1, item.desc2,item.desc3)
+          #prev-status.left-0.btn-navigation
+            i.icon.icon-chevron_left
+
+    #modalShowMemberDetail.modal
+      .modal-content.relative
+        span#closeModalShowMemberDetail.close.absolute.top-0.right-4 &times;
+        .flex.mt-6.items-center.justify-center.border-b-2.pb-4.flex-col.px-4(
+          class='md:flex-row md:justify-start'
+        )
+          img#imageModalTeam.object-cover.c-transition.rounded-full.overflow-hidden(
+            class='w-[140px] h-[140px] md:mr-4'
+          )
+          div
+            #titleModalTeam.text-blue-100.text-xl.text-center.mt-4(class='md:text-start md:mt-0')
+            #subTitleModalTeam.text-lg.text-primary.font-light.text-center(class='md:text-start')
+        #descModalTeam.text-md.text-primary.font-light.mt-4.px-4.whitespace-pre-line.overflow-auto(
+          class='max-h-[300px] md:max-h-full'
+        )

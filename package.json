@@ -53,7 +53,7 @@
     "pug-loader": "^2.4.0",
     "purgecss-webpack-plugin": "^4",
     "style-loader": "^3.3.1",
-    "swiper": "^8.4.5",
+    "swiper": "^10.0.4",
     "tailwindcss": "^3.1.8",
     "tailwindcss-scoped-groups": "^2.0.0",
     "webpack": "^5.74.0",
