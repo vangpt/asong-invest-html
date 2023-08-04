@@ -6,7 +6,7 @@ block title
 
 block content
   include /components/breadcrumb
-  +breadcrumb('About us', 'banner02.png')
+  +breadcrumb('About us', 'banner-office-2.png')
 
   .container.overflow-hidden
     .my-14(data-aos='fade-left')
@@ -58,7 +58,7 @@ block content
       h3.text-primary.text-2xl.font-bold.text-center OUR TEAM
         .swiper.group(data-aos='zoom-in-up')
           .swiper-wrapper
-            - var ourTeam = [{ id: 'young-kyu-lim', image: 'youngkyu-lim.png', title: 'Young Kyu Lim', subTitle:'Special Advisors',},{id: 'byun-jong-jin', image: 'john-byun.png', title: 'Byun Jong-Jin (John)', subTitle:'Managing Partners' },{ id: 'sung-seung-hoon-sung', image: 'sung-seung-hoon.png', title: 'Sung Seung-Hoon Sung', subTitle:'Managing Partners' },{id: 'kim-so-yeun', image: 'kim-so-yeon.png', title: 'Kim So-Yeun', subTitle:'Executive Director' },{  id: 'hoang-le-thuy-duong',image: 'thuy-duong.png', title: 'Hoàng Lê Thùy Dương', subTitle:'Executive Director' },{id:'tran-hong-nhung', image: 'tran-hong-nhung.png', title: 'Trần Hồng Nhung', subTitle:'Directors'},]
+            - var ourTeam = [{ id: 'young-kyu-lim', image: 'youngkyu-lim.png', title: 'Young Kyu Lim', subTitle:'Special Advisors',},{ id: 'ser-miang-ng', image: 'ser.png', title: 'Ser Miang Ng', subTitle:'Special Advisors',},{id: 'byun-jong-jin', image: 'john-byun.png', title: 'Byun Jong-Jin (John)', subTitle:'Managing Partners' },{ id: 'sung-seung-hoon-sung', image: 'sung-seung-hoon.png', title: 'Sung Seung Hoo', subTitle:'Managing Partners' },{id: 'kim-so-yeun', image: 'kim-so-yeon.png', title: 'Kim So Yeon', subTitle:'Executive Director' },{  id: 'hoang-le-thuy-duong',image: 'thuy-duong.png', title: 'Hoàng Lê Thùy Dương', subTitle:'Executive Director' },{id:'tran-hong-nhung', image: 'tran-hong-nhung.png', title: 'Trần Hồng Nhung', subTitle:'Directors'},]
             each item, index in ourTeam
               .swiper-slide
                 include /components/our-team
@@ -80,8 +80,8 @@ block content
             class='w-[140px] h-[140px] md:mr-4'
           )
           div
-            #titleModalTeam.text-blue-100.text-xl.text-center.mt-4(class='md:text-start md:mt-0')
-            #subTitleModalTeam.text-lg.text-primary.font-light.text-center(class='md:text-start')
+            #titleModalTeam.text-blue-100.text-xl.text-center.mt-4(class='md:text-left md:mt-0')
+            #subTitleModalTeam.text-lg.text-primary.font-light.text-center(class='md:text-left')
         #descModalTeam.text-md.text-primary.font-light.mt-4.px-4.whitespace-pre-line.overflow-auto(
           class='max-h-[300px] md:max-h-full'
         )

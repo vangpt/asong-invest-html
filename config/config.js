@@ -29,7 +29,7 @@ const entry = Object.values(jsFile).reduce(
 // Define Pages info for HtmlWebpackPlugin
 const pagesInfo = [
   {
-    title: 'Trang chủ',
+    title: 'Asong Invest',
     filename: 'index.html',
     template: 'index.pug',
     chunks: [jsFile.home],
