@@ -6,7 +6,7 @@ block title
 
 block content
   include /components/banner
-  +banner('At ASONG INVEST,', 'we invest in the future of Vietnam', 'assets/images/banner01.png')
+  +banner('At ASONG INVEST,', 'We invest in the future of Vietnam', 'assets/images/banner01.png')
 
   .container
     .flex.flex-col-reverse.gap-10.my-14(class='lg:grid lg:grid-cols-2')
@@ -26,9 +26,11 @@ block content
       h3.text-3xl.text-center.font-bold.my-4 Services we serve to you
       .text-center We will primarily focus on making impact investments in controlling or significant minority stakes in the traditional and alternative asset classes, including:
       .grid.my-14.grid-cols-4(data-aos='zoom-out')
-        - var serviceList = [{ image: 'service05.png', title: 'Renewable Energy' },{ image: 'service02.png', title: 'Culture, Sports & Tourism Infrastructure' },{ image: 'service01.png', title: 'Equitization of State-Owned Enterprises' },{ image: 'service06.png', title: 'Real-Estate NPLs' }]
+        - var serviceList = [{ image: 'service01.png', title: 'Renewable Energy' },{ image: 'service02.png', title: 'Culture, Sports & Tourism Infrastructure' },{ image: 'service03.png', title: 'Equitization of State-Owned Enterprises' },{ image: 'service04.png', title: 'Real-Estate NPLs' }]
         each item, index in serviceList
-          .col-span-4.group(class='first:border-0 md:border-l md:col-span-2 lg:col-span-1')
+          .col-span-4.group(class='first:border-0 md:border-l md:col-span-2 lg:col-span-1')(
+            class=`${index === 2 && 'md:border-l-0 lg:border-l'}`
+          )
             .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full.c-transition(
               class='hover:-translate-y-3'
             )
