@@ -22,8 +22,7 @@ block content
     //- style='background-image: url(assets/images/bg-service.png)'
   .bg-cover.bg-center.bg-no-repeat.relative.w-full
     .container.py-24.overflow-hidden
-      h2.text-2xl.font-bold.text-center.text-primary SERVICE AREAS
-      h3.text-3xl.text-center.font-bold.my-4 Services we serve to you
+      h2.text-3xl.text-center.font-bold.my-4 Our Primary Focus
       .text-center We will primarily focus on making impact investments in controlling or significant minority stakes in the traditional and alternative asset classes, including:
       .grid.my-14.grid-cols-4(data-aos='zoom-out')
         - var serviceList = [{ image: 'service01.png', title: 'Renewable Energy' },{ image: 'service02.png', title: 'Culture, Sports & Tourism Infrastructure' },{ image: 'service03.png', title: 'Equitization of State-Owned Enterprises' },{ image: 'service04.png', title: 'Real-Estate NPLs' }]
@@ -41,9 +40,8 @@ block content
     style='background-image: url(assets/images/bg-completed-project.png)',
     class='md:h-[600px]'
   )
-    .container.py-4
-      h2.text-2xl.font-bold.text-center.text-primary(class='md:pt-48') OUR CASES
-      h3.text-3xl.text-center.font-bold.mt-4.mb-14 Completed Projects
+    .container.py-6
+      h2.text-3xl.text-center.font-bold.mb-14(class='md:mt-8') Our Investment Solution
       .relative
         section.grid.grid-cols-1.gap-5.left-0.right-0.z-10.mx-auto(
           class='md:grid-cols-2 md:gap-10 md:absolute lg:w-3/5'
@@ -55,34 +53,25 @@ block content
             include /components/article-type2
             +articleType2(item.title, item.image, item.desc, false, item.link)
 
-  .bg-contain.bg-center.bg-no-repeat.relative.w-full(
-    style='background-image: url(assets/images/map-earth.png)',
-    class='h-[400px] md:h-[1000px]'
-  )
-    .container.py-4
-      h2.text-2xl.font-bold.text-center.text-primary(class='md:pt-48') TRUST US
-      h3.text-3xl.text-center.font-bold.mt-4.mb-14 Entire World Trust us
-
   .bg-gray-200
     .container.py-12(data-aos='fade-right')
-      h2.text-2xl.font-bold.text-center.text-primary WE ARE HERE FOR
-      h3.text-3xl.text-center.font-bold.mt-4.mb-14 News
+      h2.text-3xl.text-center.font-bold.mt-4.mb-14 Our Latest News
       .relative
         section.grid.grid-cols-1.gap-5(class='lg:grid-cols-3 md:gap-10')
-          - var articleType2List = [{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'/news/vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'ny Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training', link:'/news/international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html', desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.', image: 'assets/images/news/news-3.1.png', date: '09/12/2022'},{ title:'Nemo Partners introduces Korean spiritual gastronomy featuring revered chef Jeong Kwan', link:'/news/nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.html', desc: 'Culinary guide So Yeon Kim, Director at Nemo Partners, introduced the third year of Korean Gastronomy Week in Hanoi, in collaboration with the "Philosopher Chef" Jeong Kwan.', image: 'assets/images/news/news-5.1.png', date: '29/10/2022'}]
+          - var articleType2List = [{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'/news/vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'Any Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training', link:'/news/international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html', desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.', image: 'assets/images/news/news-3.1.png', date: '09/12/2022'},{ title:"Nemo-PVcom Merit Fund eyes int'l investors", link:'/news/nemo-pvcom-merit-fund-eyes-int-l-investors.html', desc: 'Nemo-PVcom Merit Fund (NPMF) has completed its initial round of funding, aiming to up figures in 2022 and 2023 via global investors.', image: 'assets/images/news/news-6.1.png', date: '23/02/2022'}]
           each item in articleType2List
             include /components/article-type2
             +articleType2(item.title, item.image, item.desc, true, item.link, item.date)
 
   #business-partners.bg-cover.bg-center.bg-no-repeat.relative.w-full
     .container.pt-9.pb-24.overflow-hidden
-      h3.text-3xl.text-center.font-bold.mt-4.mb-144 Business Partners
+      h2.text-3xl.text-center.font-bold.mt-4.mb-144 Our Business Partners
         .swiper.group.mt-8.px-8(data-aos='zoom-out')
           .swiper-wrapper
-            - var serviceList = [{ image: 'partner01.png' }, { image: 'partner02.png' }, { image: 'partner03.png' }, { image: 'partner06.png' }, { image: 'partner04.png' }, { image: 'partner05.png' }, { image: 'partner07.png' }, { image: 'partner01.png' }, { image: 'partner02.png' }, { image: 'partner03.png' }, { image: 'partner06.png' }, { image: 'partner04.png' }, { image: 'partner05.png' }, { image: 'partner07.png' }]
+            - var serviceList = [{ image: 'partner01.png' }, { image: 'partner02.png' }, { image: 'partner03.png' }, { image: 'partner06.png' }, { image: 'partner04.png' }, { image: 'partner05.png' }, { image: 'partner07.png' }, { image: 'partner08.png' }, { image: 'partner09.png' }]
             each item, index in serviceList
               .swiper-slide
-                img.object-cover.mx-auto(src=`assets/images/${item.image}`)(class='h-[80px]')
+                img.object-cover.mx-auto(src=`assets/images/${item.image}`)(class='h-[90px]')
 
           #next-status.right-0.btn-navigation
             i.icon.icon-chevron_right

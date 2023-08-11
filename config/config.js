@@ -53,20 +53,20 @@ const pagesInfo = [
     buildName: 'contact.html',
   },
   {
+    title: 'Not Found',
+    filename: '404.html',
+    template: '404.pug',
+    chunks: [jsFile.contact],
+    build: true,
+    buildName: '404.html',
+  },
+  {
     title: 'News',
     filename: 'news.html',
     template: 'news.pug',
     chunks: [jsFile.news],
     build: true,
     buildName: 'news.html',
-  },
-  {
-    title: 'News Detail',
-    filename: 'news-detail.html',
-    template: 'news-detail.pug',
-    chunks: [jsFile.newsDetail],
-    build: true,
-    buildName: 'news-detail.html',
   },
   // completed projects
   {
@@ -107,31 +107,12 @@ const pagesInfo = [
     buildName: 'news/vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html',
   },
   {
-    title: 'Nemo Partners introduces Korean spiritual gastronomy featuring revered chef Jeong Kwan',
-    filename:
-      'news/nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.html',
-    template:
-      'news/nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.pug',
-    chunks: [jsFile.newsDetail],
-    build: true,
-    buildName:
-      'news/nemo-partners-introduces-korean-spiritual-gastronomy-featuring-revered-chef-jeong-kwan.html',
-  },
-  {
     title: "Nemo-PVcom Merit Fund eyes int'l investors",
     filename: 'nemo-pvcom-merit-fund-eyes-int-l-investors.html',
     template: 'news/nemo-pvcom-merit-fund-eyes-int-l-investors.pug',
     chunks: [jsFile.newsDetail],
     build: true,
     buildName: 'news/nemo-pvcom-merit-fund-eyes-int-l-investors.html',
-  },
-  {
-    title: 'Quỹ đầu tư giá trị Nemo - PVcom hoàn thành vòng gọi vốn ban đầu',
-    filename: 'quy-dau-tu-gia-tri-nemo-pvcom-hoan-thanh-vong-goi-von-ban-dau.html',
-    template: 'news/quy-dau-tu-gia-tri-nemo-pvcom-hoan-thanh-vong-goi-von-ban-dau.pug',
-    chunks: [jsFile.newsDetail],
-    build: true,
-    buildName: 'news/quy-dau-tu-gia-tri-nemo-pvcom-hoan-thanh-vong-goi-von-ban-dau.html',
   },
 ]
 

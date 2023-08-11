@@ -15,7 +15,7 @@ const LIST_OUR_TEAM = [
     id: 'young-kyu-lim',
     image: 'youngkyu-lim.png',
     title: 'Young Kyu Lim',
-    subTitle: 'Chair Of the Board',
+    subTitle: 'Chair of the Board',
     description:
       "Mr. Lim is currently the Vice Chairman and the largest shareholder of Gemopia Jewelry Group. Established in 1978, and is now one of the world's largest ODM fine jewelry manufacturers. It has two sales offices in Korea and Japan, with three factories in China, Vietnam, and Indonesia.\n\nIn Seoul, he also led and completed more than 12 successful greenfield real estate development projects for commercial & office buildings through its real estate investment subsidiary in Korea.\n\nHe also actively participates in many positions in local and international sports associations.\n\nIncluding the Vice President position for the Korea Table Tennis Association, the Vice President for the International Sports Strategy Foundation in Korea, and the Vice Chair of the Global E-Sports Federation [FLA Commission].\n\n Mr. Lim received a BA in Science from Michigan State University, East Lansing.",
   },
@@ -41,7 +41,7 @@ const LIST_OUR_TEAM = [
     title: 'Sung Seung Hoon',
     subTitle: 'Managing Partner',
     description:
-      'Mr. Sung is the Managing Partner and CEO of ASONG INVEST. His primary responsibility is for deal origination and execution. He also oversees portfolio companies and projects day to day management.\n\nBefore joining ASONG INVEST, Mr. Sung was CIO of Nemo Partners Investment & Consulting in Vietnam for eight years, heading up the advisory and consulting division for Infrastructure and Renewable Energy Industry. During his time with Kyungnam Enterprise, he was one of the key members involved in the planning, constructing, and managing the Hanoi’s largest landmark real estate project, “Kyugnam Tower’. He started his career as an Investment Analyst for Credit Agricole Corporate and Investment Bank., Seoul.\n\nMr. Sung holds an MSc in International Labour Relationships from the London School of Economics and graduated with a BA in Business Administration from Korea University, Seoul.',
+      'Mr. Sung is the Managing Partner and CEO of ASONG INVEST. His primary responsibility is for deal origination and execution. He also oversees portfolio companies and projects day to day management.\n\nBefore joining ASONG INVEST, Mr. Sung was CIO of Nemo Partners Investment & Consulting in Vietnam for eight years, heading up the advisory and consulting division for Infrastructure and Renewable Energy Industry. During his time with Keangnam Landmark 72, he was one of the key members involved in the planning, constructing, and managing the Hanoi’s largest landmark real estate project, “Kyugnam Tower’. He started his career as an Investment Analyst for Credit Agricole Corporate and Investment Bank., Seoul.\n\nMr. Sung holds an MSc in International Labour Relationships from the London School of Economics and graduated with a BA in Business Administration from Korea University, Seoul.',
   },
   {
     id: 'kim-so-yeun',
@@ -65,7 +65,7 @@ const LIST_OUR_TEAM = [
     title: 'Trần Hồng Nhung',
     subTitle: 'Director',
     description:
-      'Ms. Tran is the Director and Senior Operation Manager of ASONG INVEST. She in charge of Human Resources and Administrative Departments\n\nMs. Tran’s expertise in corporate establishment to operational issues come from her past 12 years of experience in medical industry, such as Vinmec International HospitaL, Hanoi Obstetrics and Gynecology Hospital and Hanoi General Hospital.\n\nMs. Tran holds a Master of Business Management (MSc) from the University of East Anglia UK, and received a Bachelor of Business Law (BSc), National Economics University Vietnam',
+      'Ms. Tran is the Director and Senior Operation Manager of ASONG INVEST. She in charge of Human Resources and Administrative Departments\n\nMs. Tran’s expertise in corporate establishment to operational issues come from her past 12 years of experience in medical industry, such as Vinmec International Hospital, Hanoi Obstetrics and Gynecology Hospital and Hanoi General Hospital.\n\nMs. Tran holds a Master of Business Management (MSc) from the University of East Anglia UK, and received a Bachelor of Business Law (BSc), National Economics University Vietnam',
   },
 ]
 
