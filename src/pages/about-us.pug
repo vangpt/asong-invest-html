@@ -9,19 +9,19 @@ block content
   +breadcrumb('About us', 'banner-office-2.png')
 
   .container.overflow-hidden
-    .my-14(data-aos='fade-left')
+    .my-14.text-justify(data-aos='fade-left')
       h3.text-primary.text-2xl.font-bold.mb-5 Who We Are
       .grid.grid-cols-1.gap-10(class='md:grid-cols-3')
         .col-span-1 ASONG INVEST is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.
         .col-span-1 When mobilizing our capital investment, we will always uphold the four key principles of sustainable development goals (SDGs) and respect the environmental, social, and governance (ESG) frameworks.
-        .col-span-1.font-bold To be the responsible investor, we will consider our investment actions on the local social, economic, and environmental impacts alongside our financial returns.
+        .col-span-1 To be the responsible investor, we will consider our investment actions on the local social, economic, and environmental impacts alongside our financial returns.
 
-      video.mx-auto.mt-8(width='100%', controls)(class='max-w-[800px]')
+      video.mx-auto.mt-8(width='100%', controls, poster='assets/poster-video.png')(class='max-w-[800px]')
         source(src='assets/video.mp4', type='video/mp4')
         Your browser does not support the video tag.
 
   .bg-gray-100.py-8.overflow-hidden
-    .container(data-aos='fade-right')
+    .container.text-justify(data-aos='fade-right')
       h3.text-primary.text-2xl.font-bold.mt-8 ABOUT US
       .grid.grid-cols-1.gap-10.mt-5(class='xl:grid-cols-3')
         .col-span-1
@@ -46,10 +46,7 @@ block content
           br
           div We will work in teams with our business partners looking for the right mix of skills, knowledge, and experience when approaching new potential investments.
           br
-          div Our seasoned professional team members will command in-depth knowledge in their respective fields of expertise:
-            |
-            |
-            i investment research, direct investment, project & corporate financing, capital markets, and law.
+          div Our seasoned professional team members will command in-depth knowledge in their respective fields of expertise: investment research, direct investment, project & corporate financing, capital markets, and law.
           br
           div When investing, providing capital is only the beginning of a more complex and committed program for adding value to an enterprise or project.
           br
@@ -84,6 +81,6 @@ block content
           div
             #titleModalTeam.text-blue-100.text-xl.text-center.mt-4(class='md:text-left md:mt-0')
             #subTitleModalTeam.text-lg.text-primary.font-light.text-center(class='md:text-left')
-        #descModalTeam.text-md.text-primary.font-light.mt-4.px-4.whitespace-pre-line.overflow-auto(
+        #descModalTeam.text-md.text-primary.font-light.mt-4.px-4.whitespace-pre-line.overflow-auto.text-justify(
           class='max-h-[300px] md:max-h-full'
         )

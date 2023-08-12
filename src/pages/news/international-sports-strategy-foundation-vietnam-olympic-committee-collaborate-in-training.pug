@@ -4,12 +4,16 @@ block title
   - const title = htmlWebpackPlugin.options.title
   title= title
 
+block metaDescription
+  - const desc = htmlWebpackPlugin.options.desc
+  meta(name='description', content=desc)
+
 block content
   include /components/breadcrumb
   +breadcrumb('news', 'banner-office-3.png')
 
   .container
-    .my-14
+    .my-14.text-justify
       h3.text-2xl.font-semibold International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training
       span.flex.items-center.mt-3
         i.icon.icon-calendar_today.mr-3

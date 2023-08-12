@@ -89,6 +89,7 @@ const pagesInfo = [
   {
     title:
       'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training',
+    desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.',
     filename:
       'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html',
     template:
@@ -100,6 +101,7 @@ const pagesInfo = [
   },
   {
     title: 'Vietnamese athletes to get $1M bonus for Olympic gold medal',
+    desc: 'Any Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.',
     filename: 'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html',
     template: 'news/vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.pug',
     chunks: [jsFile.newsDetail],
@@ -108,6 +110,7 @@ const pagesInfo = [
   },
   {
     title: "Nemo-PVcom Merit Fund eyes int'l investors",
+    desc: 'Nemo-PVcom Merit Fund (NPMF) has completed its initial round of funding, aiming to up figures in 2022 and 2023 via global investors.',
     filename: 'nemo-pvcom-merit-fund-eyes-int-l-investors.html',
     template: 'news/nemo-pvcom-merit-fund-eyes-int-l-investors.pug',
     chunks: [jsFile.newsDetail],
@@ -121,6 +124,7 @@ const htmlWebpackPlugins = pagesInfo.map(
   (page) =>
     new HtmlWebpackPlugin({
       title: page.title,
+      desc: page.desc,
       template: `${paths.src}/pages/${page.template}`,
       filename: page.filename,
       chunks: [jsFile.main, ...page.chunks],
@@ -134,6 +138,7 @@ const htmlWebpackPluginsBuild = pagesInfo
     (page) =>
       new HtmlWebpackPlugin({
         title: page.title,
+        desc: page.desc,
         template: `${paths.src}/pages/${page.template}`,
         filename: page?.buildName || page.filename,
         chunks: [jsFile.main, ...page.chunks],
