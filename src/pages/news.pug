@@ -7,10 +7,12 @@ block title
 block metaDescription
   - const desc = htmlWebpackPlugin.options.desc
   - const url = htmlWebpackPlugin.options.url
+  - const image = htmlWebpackPlugin.options.image
   meta(name='description', content=desc)
   meta(property='og:title', content=title)
   meta(property='og:description', content=desc)
   meta(property='og:url', content=url)
+  meta(property='og:image', content=image)
   meta(name='twitter:title', content=title)
   meta(name='twitter:description', content=desc)
   meta(name='twitter:card', content='summary_large_image')
