@@ -176,7 +176,7 @@ const htmlWebpackPluginsBuild = pagesInfo
         filename: page?.buildName || page.filename,
         chunks: [jsFile.main, ...page.chunks],
         publicPath: './',
-        minify: false,
+        minify: true,
       })
   )
 
