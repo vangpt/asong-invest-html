@@ -32,7 +32,7 @@ const URL_PAGE = 'https://company-html.vercel.app/'
 const pagesInfo = [
   {
     title: 'Asong Invest',
-    desc: 'We invest in the future of Vietnam',
+    desc: 'ASONG INVEST is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.',
     url: `${URL_PAGE}`,
     image: `${URL_PAGE}assets/images/banner-office-3.png`,
     filename: 'index.html',
@@ -42,7 +42,7 @@ const pagesInfo = [
     buildName: 'index.html',
   },
   {
-    title: 'About us',
+    title: 'Asong Invest',
     desc: 'ASONG INVEST is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.',
     url: `${URL_PAGE}about-us.html`,
     image: `${URL_PAGE}assets/images/banner-office-3.png`,
@@ -53,8 +53,8 @@ const pagesInfo = [
     buildName: 'about-us.html',
   },
   {
-    title: 'Contact',
-    desc: '15F Tower 2, Capital Place, 29 Lieu Giai, Ba Dinh, Hanoi, Vietnam',
+    title: 'Asong Invest',
+    desc: 'ASONG INVEST is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.',
     url: `${URL_PAGE}contact.html`,
     image: `${URL_PAGE}assets/images/banner-office-3.png`,
     filename: 'contact.html',
@@ -64,8 +64,8 @@ const pagesInfo = [
     buildName: 'contact.html',
   },
   {
-    title: 'Not Found',
-    desc: "The page you are looking for doesn't exist or an other error occurred.",
+    title: 'Asong Invest',
+    desc: 'ASONG INVEST is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.',
     url: `${URL_PAGE}404.html`,
     image: `${URL_PAGE}assets/images/banner-office-3.png`,
     filename: '404.html',
@@ -75,8 +75,8 @@ const pagesInfo = [
     buildName: '404.html',
   },
   {
-    title: 'News',
-    desc: 'News about Asong Invest',
+    title: 'Asong Invest',
+    desc: 'ASONG INVEST is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.',
     url: `${URL_PAGE}news.html`,
     image: `${URL_PAGE}assets/images/banner-office-3.png`,
     filename: 'news.html',
