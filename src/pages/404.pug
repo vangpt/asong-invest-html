@@ -1,14 +1,27 @@
-extends /layouts/default
+extends /layouts/blank
 
 block title
   - const title = htmlWebpackPlugin.options.title
   title= title
 
+block metaDescription
+  - const desc = htmlWebpackPlugin.options.desc
+  - const url = htmlWebpackPlugin.options.url
+  meta(name='description', content=desc)
+  meta(property='og:title', content=title)
+  meta(property='og:description', content=desc)
+  meta(property='og:url', content=url)
+  meta(name='twitter:title', content=title)
+  meta(name='twitter:description', content=desc)
+  meta(name='twitter:card', content='summary_large_image')
+
 block content
   .absolute.w-full.h-full.top-0.flex.items-center.z-10
     .container
-      h2.text-5xl.text-center.font-bold.py-3 404
-      .text-center.text-2xl PAGE NOT FOUND!
+      .flex.justify-center
+        a(href='/') 
+          img.object-cover(src='assets/logo.jpg', alt='logo', class='w-[280px]')
+      h2.text-7xl.text-center.font-bold.py-3 404
       .text-center.mt-3.text-xl The page you are looking for doesn't exist or an other error occurred.
       .text-center.mt-3
         a.text-lg.underline.text-blue-600(href='/') Back to home

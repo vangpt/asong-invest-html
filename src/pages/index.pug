@@ -4,9 +4,20 @@ block title
   - const title = htmlWebpackPlugin.options.title
   title= title
 
+block metaDescription
+  - const desc = htmlWebpackPlugin.options.desc
+  - const url = htmlWebpackPlugin.options.url
+  meta(name='description', content=desc)
+  meta(property='og:title', content=title)
+  meta(property='og:description', content=desc)
+  meta(property='og:url', content=url)
+  meta(name='twitter:title', content=title)
+  meta(name='twitter:description', content=desc)
+  meta(name='twitter:card', content='summary_large_image')
+
 block content
   include /components/banner
-  +banner('At ASONG INVEST,', 'We invest in the future of Vietnam', 'assets/images/banner01.png')
+  +banner('ASONG INVEST,', 'We invest in the future of Vietnam', 'assets/images/banner01.png')
 
   .container
     .flex.flex-col-reverse.gap-10.my-14(class='lg:grid lg:grid-cols-2')

@@ -26,10 +26,14 @@ const entry = Object.values(jsFile).reduce(
   {}
 )
 
+const URL_PAGE = 'https://company-html.vercel.app/'
+
 // Define Pages info for HtmlWebpackPlugin
 const pagesInfo = [
   {
     title: 'Asong Invest',
+    desc: 'We invest in the future of Vietnam',
+    url: `${URL_PAGE}`,
     filename: 'index.html',
     template: 'index.pug',
     chunks: [jsFile.home],
@@ -38,6 +42,8 @@ const pagesInfo = [
   },
   {
     title: 'About us',
+    desc: 'ASONG INVEST is a multi-disciplinary investment firm focused on impact opportunities dedicated to providing long-term sustainable investment to those impact-generating corporate champions and impact-creating project winners in Vietnam.',
+    url: `${URL_PAGE}about-us.html`,
     filename: 'about-us.html',
     template: 'about-us.pug',
     chunks: [jsFile.aboutUs],
@@ -46,6 +52,8 @@ const pagesInfo = [
   },
   {
     title: 'Contact',
+    desc: '15F Tower 2, Capital Place, 29 Lieu Giai, Ba Dinh, Hanoi, Vietnam',
+    url: `${URL_PAGE}contact.html`,
     filename: 'contact.html',
     template: 'contact.pug',
     chunks: [jsFile.contact],
@@ -54,6 +62,8 @@ const pagesInfo = [
   },
   {
     title: 'Not Found',
+    desc: "The page you are looking for doesn't exist or an other error occurred.",
+    url: `${URL_PAGE}404.html`,
     filename: '404.html',
     template: '404.pug',
     chunks: [jsFile.contact],
@@ -62,6 +72,8 @@ const pagesInfo = [
   },
   {
     title: 'News',
+    desc: 'News about Asong Invest',
+    url: `${URL_PAGE}news.html`,
     filename: 'news.html',
     template: 'news.pug',
     chunks: [jsFile.news],
@@ -71,6 +83,9 @@ const pagesInfo = [
   // completed projects
   {
     title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund',
+    desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.',
+    url: `${URL_PAGE}asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html`,
+    image: `${URL_PAGE}/assets/images/news/news-1.1.png`,
     filename: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html',
     template: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.pug',
     chunks: [jsFile.newsDetail],
@@ -79,6 +94,9 @@ const pagesInfo = [
   },
   {
     title: 'Asong Invest, Noble và PVCB Capital ký kết MOU về Quỹ năng lượng tái tạo',
+    desc: "Ngày 23/6/2023, tại Hà Nội, công ty TNHH Asong Invest (viết tắt là Asong Invest), công ty TNHH Noble (Việt Nam) (viết tắt là Noble) và công ty Cổ phần Quản lý Quỹ Ngân hàng TMCP Đại chúng Việt Nam (viết tắt là PVCB Capital) đã ký kết biên bản ghi nhớ về hợp tác chung trong việc thành lập 'Quỹ đầu tư tăng trưởng xanh PV-Asong'",
+    url: `${URL_PAGE}asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html`,
+    image: `${URL_PAGE}/assets/images/news/news-1.2.png`,
     filename: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html',
     template: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.pug',
     chunks: [jsFile.newsDetail],
@@ -90,6 +108,8 @@ const pagesInfo = [
     title:
       'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training',
     desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.',
+    url: `${URL_PAGE}news/international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html`,
+    image: `${URL_PAGE}/assets/images/news/news-3.1.png`,
     filename:
       'international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html',
     template:
@@ -102,6 +122,8 @@ const pagesInfo = [
   {
     title: 'Vietnamese athletes to get $1M bonus for Olympic gold medal',
     desc: 'Any Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.',
+    url: `${URL_PAGE}news/vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html`,
+    image: `${URL_PAGE}/assets/images/news/news-4.1.png`,
     filename: 'vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html',
     template: 'news/vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.pug',
     chunks: [jsFile.newsDetail],
@@ -111,6 +133,8 @@ const pagesInfo = [
   {
     title: "Nemo-PVcom Merit Fund eyes int'l investors",
     desc: 'Nemo-PVcom Merit Fund (NPMF) has completed its initial round of funding, aiming to up figures in 2022 and 2023 via global investors.',
+    url: `${URL_PAGE}news/nemo-pvcom-merit-fund-eyes-int-l-investors.html`,
+    image: `${URL_PAGE}/assets/images/news/news-6.1.png`,
     filename: 'nemo-pvcom-merit-fund-eyes-int-l-investors.html',
     template: 'news/nemo-pvcom-merit-fund-eyes-int-l-investors.pug',
     chunks: [jsFile.newsDetail],
@@ -125,6 +149,8 @@ const htmlWebpackPlugins = pagesInfo.map(
     new HtmlWebpackPlugin({
       title: page.title,
       desc: page.desc,
+      url: page.url,
+      image: page.image,
       template: `${paths.src}/pages/${page.template}`,
       filename: page.filename,
       chunks: [jsFile.main, ...page.chunks],
@@ -139,6 +165,8 @@ const htmlWebpackPluginsBuild = pagesInfo
       new HtmlWebpackPlugin({
         title: page.title,
         desc: page.desc,
+        url: page.url,
+        image: page.image,
         template: `${paths.src}/pages/${page.template}`,
         filename: page?.buildName || page.filename,
         chunks: [jsFile.main, ...page.chunks],

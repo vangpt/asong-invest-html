@@ -4,6 +4,17 @@ block title
   - const title = htmlWebpackPlugin.options.title
   title= title
 
+block metaDescription
+  - const desc = htmlWebpackPlugin.options.desc
+  - const url = htmlWebpackPlugin.options.url
+  meta(name='description', content=desc)
+  meta(property='og:title', content=title)
+  meta(property='og:description', content=desc)
+  meta(property='og:url', content=url)
+  meta(name='twitter:title', content=title)
+  meta(name='twitter:description', content=desc)
+  meta(name='twitter:card', content='summary_large_image')
+
 block content
   include /components/breadcrumb
   +breadcrumb('About us', 'banner-office-2.png')
@@ -40,7 +51,7 @@ block content
           br
           div We hope to build long-term strategic growth plans and implement these plans into corporate or project actions. And in the process, we will adhere to strict financial disciplines and corporate governance based on our investment principles.
           br
-          div Moreover. we wish to build and provide realistic motivations for the management and project leaders and work cordially with all concerned parties, aligning their goals and visions with those of company shareholders & investors.
+          div Moreover, we wish to build and provide realistic motivations for the management and project leaders and work cordially with all concerned parties, aligning their goals and visions with those of company shareholders & investors.
         .col-span-1
           h3.font-bold.text-lg Our Experienced Team & Business Partners
           br
@@ -57,7 +68,7 @@ block content
       h3.text-primary.text-2xl.font-bold.text-center OUR TEAM
         .swiper.group(data-aos='zoom-in-up')
           .swiper-wrapper
-            - var ourTeam = [{ id: 'young-kyu-lim', image: 'youngkyu-lim.png', title: 'Young Kyu Lim', subTitle:'Chair of the Board',},{ id: 'ser-miang-ng', image: 'ser.png', title: 'Ser Miang Ng', subTitle:'Special Advisor',},{id: 'byun-jong-jin', image: 'john-byun.png', title: 'Byun Jong-Jin (John)', subTitle:'Managing Partner' },{ id: 'sung-seung-hoon-sung', image: 'sung-seung-hoon.png', title: 'Sung Seung Hoon', subTitle:'Managing Partner' },{id: 'kim-so-yeun', image: 'kim-so-yeon.png', title: 'Kim So Yeon', subTitle:'Executive Director' },{  id: 'hoang-le-thuy-duong',image: 'thuy-duong.png', title: 'Hoàng Lê Thùy Dương', subTitle:'Executive Director' },{id:'tran-hong-nhung', image: 'tran-hong-nhung.png', title: 'Trần Hồng Nhung', subTitle:'Director'},]
+            - var ourTeam = [{ id: 'young-kyu-lim', image: 'youngkyu-lim.png', title: 'Young Kyu Lim', subTitle:'Chair of the Board',},{ id: 'ser-miang-ng', image: 'ser.png', title: 'Ser Miang Ng', subTitle:'Special Advisor',},{ id: 'sung-seung-hoon-sung', image: 'sung-seung-hoon.png', title: 'Sung Seung Hoon', subTitle:'Managing Partner' },{id: 'byun-jong-jin', image: 'john-byun.png', title: 'Byun Jong-Jin (John)', subTitle:'Managing Partner' },{id: 'kim-so-yeun', image: 'kim-so-yeon.png', title: 'Kim So Yeon', subTitle:'Executive Director' },{  id: 'hoang-le-thuy-duong',image: 'thuy-duong.png', title: 'Hoàng Lê Thùy Dương', subTitle:'Executive Director' },{id:'tran-hong-nhung', image: 'tran-hong-nhung.png', title: 'Trần Hồng Nhung', subTitle:'Director'},]
             each item, index in ourTeam
               .swiper-slide
                 include /components/our-team
