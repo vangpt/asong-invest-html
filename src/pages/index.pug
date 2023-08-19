@@ -46,7 +46,7 @@ block content
             .flex.flex-col.items-center.cursor-pointer.py-8.px-4.h-full.c-transition(
               class='hover:-translate-y-3'
             )
-              img(src=`assets/images/${item.image}`, width='62px')
+              img(src=`assets/images/${item.image}`, width='62px', alt='primary-focus')
               .text-center.mt-4.text-blue-100= item.title
 
   .bg-cover.bg-center.bg-no-repeat.relative.w-full(
@@ -84,7 +84,7 @@ block content
             - var serviceList = [{ image: 'partner01.png' }, { image: 'partner02.png' }, { image: 'partner03.png' }, { image: 'partner06.png' }, { image: 'partner04.png' }, { image: 'partner05.png' }, { image: 'partner07.png' }, { image: 'partner08.png' }, { image: 'partner09.png' }]
             each item, index in serviceList
               .swiper-slide
-                img.object-cover.mx-auto(src=`assets/images/${item.image}`)(class='h-[90px]')
+                img.object-cover.mx-auto(src=`assets/images/${item.image}`, alt='partner')(class='h-[90px]')
 
           #next-status.right-0.btn-navigation
             i.icon.icon-chevron_right
