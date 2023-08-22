@@ -26,7 +26,7 @@ const entry = Object.values(jsFile).reduce(
   {}
 )
 
-const URL_PAGE = 'https://company-html.vercel.app/'
+const URL_PAGE = 'https://asonginvest.com/'
 
 // Define Pages info for HtmlWebpackPlugin
 const pagesInfo = [
