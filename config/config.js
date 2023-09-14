@@ -146,6 +146,17 @@ const pagesInfo = [
     build: true,
     buildName: 'news/nemo-pvcom-merit-fund-eyes-int-l-investors.html',
   },
+  {
+    title: 'PV Power, Asong Invest, and PVCB Capital sign MoU on green industry',
+    desc: 'On August 25 in Hanoi, PetroVietnam Power Corporation (PV Power), along with Asong Invest and PVCB Capital, signed an MoU signing to co-invest and collaborate on green industry in Vietnam.',
+    url: `${URL_PAGE}news/pv-power-asong-invest-and-pvcb-capital-sign-mou-on-green-industry.html`,
+    image: `${URL_PAGE}assets/images/news/news-7.1.png`,
+    filename: 'pv-power-asong-invest-and-pvcb-capital-sign-mou-on-green-industry.html',
+    template: 'news/pv-power-asong-invest-and-pvcb-capital-sign-mou-on-green-industry.pug',
+    chunks: [jsFile.newsDetail],
+    build: true,
+    buildName: 'news/pv-power-asong-invest-and-pvcb-capital-sign-mou-on-green-industry.html',
+  },
 ]
 
 // List HtmlWebpackPlugin that render dist folder

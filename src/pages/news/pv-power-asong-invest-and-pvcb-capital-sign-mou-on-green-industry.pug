@@ -1,0 +1,61 @@
+extends /layouts/default
+
+block title
+  - const title = htmlWebpackPlugin.options.title
+  title= title
+
+block metaDescription
+  - const desc = htmlWebpackPlugin.options.desc
+  - const url = htmlWebpackPlugin.options.url
+  - const image = htmlWebpackPlugin.options.image
+  meta(name='description', content=desc)
+  meta(property='og:title', content=title)
+  meta(property='og:description', content=desc)
+  meta(property='og:url', content=url)
+  meta(property='og:image', content=image)
+  meta(name='twitter:title', content=title)
+  meta(name='twitter:description', content=desc)
+  meta(name='twitter:card', content='summary_large_image')
+
+block content
+  include /components/breadcrumb
+  +breadcrumb('news', 'banner-office-3.png')
+
+  .container
+    .my-14.text-justify
+      h3.text-2xl.font-semibold PV Power, Asong Invest, and PVCB Capital sign MoU on green industry
+      span.flex.items-center.mt-3
+        i.icon.icon-calendar_today.mr-3
+        span 29/08/2023
+
+      p.my-5 On August 25 in Hanoi, PetroVietnam Power Corporation (PV Power), along with Asong Invest and PVCB Capital, signed an MoU signing to co-invest and collaborate on green industry in Vietnam.
+
+      .mx-auto(class='md:w-3/4')
+        img.object-cover.c-transition.w-full(
+          src='assets/images/news/news-7.png',
+          alt='PV Power, Asong Invest, and PVCB Capital sign MoU on green industry'
+        )
+        p.mb-5.bg-gray-100.p-2 PV Power, Asong Invest, and PVCB Capital sign MoU on green industry
+
+      p.mb-5 Hoang Van Quang, chairman of PV Power, said, "As the second-largest electricity producer in Vietnam, PV Power is doing its best for the country's energy security and contributing to the implementation of Vietnam's net-zero commitment."
+
+      p.mb-5 "Along with liquefied natural gas power projects to meet the urgent electricity demands, PV Power will develop renewable energy projects such as solar, wind, stored hydro, biomass, waste-to-energy, and others. At the same time, the implementation of fuel production projects such as green hydrogen and ammonia will gradually replace fossil fuels in coal and gas power plants, contributing to the nation's energy transition," he added.
+
+      p.mb-5 "The partnership with Asong Invest and PVCB Capital is an important milestone marking PV Power's determination to diversify its investment portfolio and focus on green energy sectors. We hope that this MoU signing ceremony will facilitate professional connections and lay the foundation for sustainable collaboration in the future," he continued.
+
+      p.mb-5 John Byun, CIO of Asong Invest said, "The use of renewable energy sources has been recognised as a key factor in promoting sustainable development, which aims to meet the needs of present generations without compromising the future. With the leadership and guidance of PV Power, we will review potential renewable energy projects ranging from on-shore wind, mid-sized hydro, floating solar, waste-to-energy, and even pumped storage hydro."
+
+      p.mb-5 According to the MoU, PV Power, Asong Invest, and PVCB Capital will cooperate to find investment opportunities for the aforementioned renewable projects, while also developing the carbon credit market in Vietnam.
+
+      p.mb-5 The parties will research and develop projects worth about $2 billion by 2025. To finance the selected projects, the fund will invest capital and shares, along with corporate bonds.
+
+      p.mb-5 The parties agree to register the above projects on the Vietnam-South Korea Carbon Certificate Trading Market under the ITMO agreement. In addition, Asong Invest and PVCB Capital will expand cooperation opportunities with PV Power's subsidiary members on other potential projects.
+
+      p.mb-5 The cooperation with Asong Invest and PVCB Capital will facilitate support for PV Power REC to develop renewable energy in accordance with the company's approved strategy. Additionally, this collaboration will open up opportunities to search for additional financial resources to implement projects developed by the corporation through investment funds.
+
+      .text-xl.font-semibold.pb-4.border-b-2 Other News
+      section.grid.grid-cols-1.gap-5.my-8(class='md:grid-cols-2 lg:grid-cols-3 md:gap-10')
+        - var articleType2List = [{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'/news/vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'Any Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training', link:'/news/international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html', desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.', image: 'assets/images/news/news-3.1.png', date: '09/12/2022'},{ title:"Nemo-PVcom Merit Fund eyes int'l investors", link:'/news/nemo-pvcom-merit-fund-eyes-int-l-investors.html', desc: 'Nemo-PVcom Merit Fund (NPMF) has completed its initial round of funding, aiming to up figures in 2022 and 2023 via global investors.', image: 'assets/images/news/news-6.1.png', date: '23/02/2022'}]
+        each item in articleType2List
+          include /components/article-type2
+          +articleType2(item.title, item.image, item.desc, true, item.link, item.date)
