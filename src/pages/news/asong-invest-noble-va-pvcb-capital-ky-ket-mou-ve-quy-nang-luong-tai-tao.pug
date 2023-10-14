@@ -1,0 +1,48 @@
+extends /layouts/default
+
+block title
+  - const title = htmlWebpackPlugin.options.title
+  title= title
+
+block metaDescription
+  - const desc = htmlWebpackPlugin.options.desc
+  - const url = htmlWebpackPlugin.options.url
+  - const image = htmlWebpackPlugin.options.image
+  meta(name='description', content=desc)
+  meta(property='og:title', content=title)
+  meta(property='og:description', content=desc)
+  meta(property='og:url', content=url)
+  meta(property='og:image', content=image)
+  meta(name='twitter:title', content=title)
+  meta(name='twitter:description', content=desc)
+  meta(name='twitter:card', content='summary_large_image')
+
+block content
+  include /components/breadcrumb
+  +breadcrumb('news', 'banner-office-3.png')
+
+  .container
+    .my-14.text-justify
+      h3.text-2xl.font-semibold Asong Invest, Noble và PVCB Capital ký kết MOU về Quỹ năng lượng tái tạo
+      span.flex.items-center.my-3
+        i.icon.icon-calendar_today.mr-3
+        span 23/06/2023
+
+      .mx-auto(class='md:w-3/4')
+        img.object-cover.c-transition.w-full(
+          src='assets/images/news/news-1.2.png',
+          alt='Tran Quang Vinh (PV Capital) and Sung Seung Hoon (Asong Invest) at the MoU. Photo courtesy of Asong.'
+        )
+
+      p.my-5.font-semibold Ngày 23/6/2023, tại Hà Nội, công ty TNHH Asong Invest (viết tắt là Asong Invest), công ty TNHH Noble (Việt Nam) (viết tắt là Noble) và công ty Cổ phần Quản lý Quỹ Ngân hàng TMCP Đại chúng Việt Nam (viết tắt là PVCB Capital) đã ký kết biên bản ghi nhớ về hợp tác chung trong việc thành lập "Quỹ đầu tư tăng trưởng xanh PV-Asong".
+
+      p.mb-5 Sự kiện diễn ra trong khuôn khổ chuyến thăm chính thức cấp nhà nước của tổng thống Hàn Quốc Yoon Suk-yeol tới Việt Nam theo lời mời của Chủ tịch nước Việt Nam Võ Văn Thưởng từ ngày 22 đến 24/6,
+
+      p.mb-5 Thông qua việc ký kết biên bản ghi nhớ này, các bên đồng ý cùng nhau hợp tác nhằm thúc đẩy cơ hội đầu tư cho các nhà đầu tư Hàn Quốc tại Việt Nam, cũng như các nhà đầu tư Việt Nam trên thị trường Hàn Quốc.
+
+      .text-xl.font-semibold.pb-4.border-b-2 Other News
+      section.grid.grid-cols-1.gap-5.my-8(class='md:grid-cols-2 lg:grid-cols-3 md:gap-10')
+        - var articleType2List = [{ title:'PV Power, Asong Invest, and PVCB Capital sign MoU on green industry', link:'/news/pv-power-asong-invest-and-pvcb-capital-sign-mou-on-green-industry.html', desc: 'On August 25 in Hanoi, PetroVietnam Power Corporation (PV Power), along with Asong Invest and PVCB Capital, signed an MoU signing to co-invest and collaborate on green industry in Vietnam.', image: 'assets/images/news/news-7.png', date: '29/08/2023'},{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'/news/vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'Any Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:"Nemo-PVcom Merit Fund eyes int'l investors", link:'/news/nemo-pvcom-merit-fund-eyes-int-l-investors.html', desc: 'Nemo-PVcom Merit Fund (NPMF) has completed its initial round of funding, aiming to up figures in 2022 and 2023 via global investors.', image: 'assets/images/news/news-6.1.png', date: '23/02/2022'}]
+        each item in articleType2List
+          include /components/article-type2
+          +articleType2(item.title, item.image, item.desc, true, item.link, item.date)

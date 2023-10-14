@@ -1,0 +1,18 @@
+@import '../main.css';
+
+#swipper-bottom {
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+#swipper-top {
+  height: 80%;
+}
+
+#swipper-bottom .swiper-slide {
+  opacity: 0.4;
+}
+
+#swipper-bottom .swiper-slide-thumb-active {
+  opacity: 1;
+}

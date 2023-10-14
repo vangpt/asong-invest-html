@@ -1,0 +1,54 @@
+extends /layouts/default
+
+block title
+  - const title = htmlWebpackPlugin.options.title
+  title= title
+
+block metaDescription
+  - const desc = htmlWebpackPlugin.options.desc
+  - const url = htmlWebpackPlugin.options.url
+  - const image = htmlWebpackPlugin.options.image
+  meta(name='description', content=desc)
+  meta(property='og:title', content=title)
+  meta(property='og:description', content=desc)
+  meta(property='og:url', content=url)
+  meta(property='og:image', content=image)
+  meta(name='twitter:title', content=title)
+  meta(name='twitter:description', content=desc)
+  meta(name='twitter:card', content='summary_large_image')
+
+block content
+  include /components/breadcrumb
+  +breadcrumb('news', 'banner-office-3.png')
+
+  .container
+    .my-14.text-justify
+      h3.text-2xl.font-semibold Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund
+      span.flex.items-center.mt-3
+        i.icon.icon-calendar_today.mr-3
+        span 26/06/2023
+
+      p.my-5 Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.
+
+      - var listImages = [{ image: 'assets/images/news/news-1.2.png', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' }, { image: 'assets/images/news/news-1.1.png', content: 'Lorem ipsum dolor sit amet, consectetur adipiod tempor incididunt ut labore et dolore magna aliqua.' }, { image: 'assets/images/news/news-3.1.png', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temnt ut labore et dolore magna aliqua.' }, { image: 'assets/images/news/news-3.2.png' }, { image: 'assets/images/news/news-4.1.png', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidiet dolore magna aliqua.' }, { image: 'assets/images/news/news-5.1.png', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' }, { image: 'assets/images/news/news-7.png', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' }, { image: 'assets/images/news/news-6.1.png', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore rem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore rem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' }]
+
+      .bg-gray-300.p-4(class='pb-[6px]')
+        #swipper-top.swiper(
+          style='--swiper-navigation-color: #fff; --swiper-pagination-color: #fff'
+        )
+          .swiper-wrapper
+            each item in listImages
+              .swiper-slide(style='height: auto')
+                .flex.h-full.flex-col(class='md:flex-row')
+                  .grow(class='md:w-9/12')
+                    img.object-cover.w-full.h-full(src=`${item.image}`, alt='partner')
+                  .bg-gray-200.p-2(class='md:w-3/12')= item.content
+
+          .swiper-button-next
+          .swiper-button-prev
+
+        #swipper-bottom.swiper(thumbsSlider='')
+          .swiper-wrapper
+            each item in listImages
+              .swiper-slide(style='height: auto')
+                img.object-cover.w-full.h-full(src=`${item.image}`, alt='partner')

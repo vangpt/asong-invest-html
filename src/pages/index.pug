@@ -49,29 +49,32 @@ block content
               img(src=`assets/images/${item.image}`, width='62px', alt='primary-focus')
               .text-center.mt-4.text-blue-100= item.title
 
-  .bg-cover.bg-center.bg-no-repeat.relative.w-full(
+  #investment-solution.bg-cover.bg-center.bg-no-repeat.relative.w-full(
     style='background-image: url(assets/images/bg-completed-project.png)',
     class='md:h-[600px]'
   )
-    .container.py-6
-      h2.text-3xl.text-center.font-bold.mb-14(class='md:mt-8') Our Investment Solution
-      .relative
-        section.grid.grid-cols-1.gap-5.left-0.right-0.z-10.mx-auto(
-          class='md:grid-cols-2 md:gap-10 md:absolute lg:w-3/5'
-        )(
-          data-aos='fade-right'
-        )
-          - var articleType2List = [{ title:'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link:'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023'},{ title:'Asong Invest, Noble và PVCB Capital ký kết MOU về Quỹ năng lượng tái tạo', link:'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html', desc: 'Ngày 23/6/2023, tại Hà Nội, công ty TNHH Asong Invest (viết tắt là Asong Invest), công ty TNHH Noble (Việt Nam) (viết tắt là Noble) và công ty Cổ phần Quản lý Quỹ Ngân hàng TMCP Đại chúng Việt Nam (viết tắt là PVCB Capital) đã ký kết biên bản ghi nhớ về hợp tác chung trong việc thành lập "Quỹ đầu tư tăng trưởng xanh PV-Asong".', image: 'assets/images/news/news-1.2.png', date: '23/06/2023'}]
+    .container.pt-9.pb-24.overflow-hidden
+      h2.text-3xl.text-center.font-bold.mt-4.mb-14 Our Investment Solution
+      .swiper.mt-8.px-8(data-aos='zoom-out')
+        .swiper-wrapper
+          - var articleType2List = [{ title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link: 'gallery1.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023' },{ title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link: 'gallery1.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023' },{ title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link: 'gallery1.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023' },{ title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link: 'gallery1.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023' },{ title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link: 'gallery1.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023' },{ title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link: 'gallery1.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023' },{ title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link: 'gallery1.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023' },{ title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link: 'gallery1.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023' }]
           each item in articleType2List
             include /components/article-type2
-            +articleType2(item.title, item.image, item.desc, false, item.link)
+            .swiper-slide
+              +articleType2(item.title, item.image, item.desc, false, item.link)
+
+        #next-status-solution.right-0.btn-navigation
+          i.icon.icon-chevron_right
+
+        #prev-status-solution.left-0.btn-navigation
+          i.icon.icon-chevron_left
 
   .bg-gray-200
     .container.py-12(data-aos='fade-right')
       h2.text-3xl.text-center.font-bold.mt-4.mb-14 Our Latest News
       .relative
         section.grid.grid-cols-1.gap-5(class='lg:grid-cols-3 md:gap-10')
-          - var articleType2List = [{ title:'PV Power, Asong Invest, and PVCB Capital sign MoU on green industry', link:'/news/pv-power-asong-invest-and-pvcb-capital-sign-mou-on-green-industry.html', desc: 'On August 25 in Hanoi, PetroVietnam Power Corporation (PV Power), along with Asong Invest and PVCB Capital, signed an MoU signing to co-invest and collaborate on green industry in Vietnam.', image: 'assets/images/news/news-7.png', date: '29/08/2023'},{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'/news/vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'Any Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training', link:'/news/international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html', desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.', image: 'assets/images/news/news-3.1.png', date: '09/12/2022'}]
+          - var articleType2List = [{ title:'PV Power, Asong Invest, and PVCB Capital sign MoU on green industry', link:'/news/pv-power-asong-invest-and-pvcb-capital-sign-mou-on-green-industry.html', desc: 'On August 25 in Hanoi, PetroVietnam Power Corporation (PV Power), along with Asong Invest and PVCB Capital, signed an MoU signing to co-invest and collaborate on green industry in Vietnam.', image: 'assets/images/news/news-7.png', date: '29/08/2023'},{ title:'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund', link:'/news/asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html', desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.', image: 'assets/images/news/news-1.1.png', date: '26/06/2023'},{ title:'Asong Invest, Noble và PVCB Capital ký kết MOU về Quỹ năng lượng tái tạo', link:'/news/asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html', desc: 'Ngày 23/6/2023, tại Hà Nội, công ty TNHH Asong Invest (viết tắt là Asong Invest), công ty TNHH Noble (Việt Nam) (viết tắt là Noble) và công ty Cổ phần Quản lý Quỹ Ngân hàng TMCP Đại chúng Việt Nam (viết tắt là PVCB Capital) đã ký kết biên bản ghi nhớ về hợp tác chung trong việc thành lập "Quỹ đầu tư tăng trưởng xanh PV-Asong".', image: 'assets/images/news/news-1.2.png', date: '23/06/2023'}]
           each item in articleType2List
             include /components/article-type2
             +articleType2(item.title, item.image, item.desc, true, item.link, item.date)

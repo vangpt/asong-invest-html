@@ -1,0 +1,62 @@
+extends /layouts/default
+
+block title
+  - const title = htmlWebpackPlugin.options.title
+  title= title
+
+block metaDescription
+  - const desc = htmlWebpackPlugin.options.desc
+  - const url = htmlWebpackPlugin.options.url
+  - const image = htmlWebpackPlugin.options.image
+  meta(name='description', content=desc)
+  meta(property='og:title', content=title)
+  meta(property='og:description', content=desc)
+  meta(property='og:url', content=url)
+  meta(property='og:image', content=image)
+  meta(name='twitter:title', content=title)
+  meta(name='twitter:description', content=desc)
+  meta(name='twitter:card', content='summary_large_image')
+
+block content
+  include /components/breadcrumb
+  +breadcrumb('news', 'banner-office-3.png')
+
+  .container
+    .my-14.text-justify
+      h3.text-2xl.font-semibold Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund
+      span.flex.items-center.mt-3
+        i.icon.icon-calendar_today.mr-3
+        span 26/06/2023
+
+      p.my-5 Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.
+
+      p.mb-5 The announcement came during a state visit on June 22-24 by South Korean President Yoon Suk Yeol, at the invitation of his Vietnamese counterpart Vo Van Thuong.
+
+      .mx-auto(class='md:w-3/4')
+        img.object-cover.c-transition.w-full(
+          src='assets/images/news/news-1.1.png',
+          alt='The leaders of Vietnam and Korea, and many businesses from both countries gathered at the Vietnam-RoK Business Forum last Saturday. Photo courtesy of Asong.'
+        )
+        p.mb-5.bg-gray-100.p-2 The leaders of Vietnam and Korea, and many businesses from both countries gathered at the Vietnam-RoK Business Forum last Saturday. Photo courtesy of Asong.
+
+      p.mb-5 The parties involved agree to cooperate in accelerating investment opportunities for Korean investors in Vietnam as well as vice versa.
+
+      p.mb-5 The "PV-Asong Green Growth Investment Fund" is expected to be established in the third quarter with a target fund size of US$100 million. The fund's investment objects are enterprises operating in the energy sector, renewable energy projects, including solar energy, pumped-storage hydroelectric, and development programs for the carbon credit market in Vietnam.
+
+      p.mb-5 The parties also agree to cooperate to register projects belonging to the Vietnam-Korea ITMO (Internationally Transferred Mitigation Outcomes) agreement.
+
+      p.mb-5 Asong Invest is an investment company focusing on impact investment opportunities in Vietnam, with expertise in infrastructure, energy, and real estate financing.
+
+      .mx-auto(class='md:w-3/4')
+        img.object-cover.c-transition.w-full(
+          src='assets/images/news/news-1.2.png',
+          alt='Tran Quang Vinh (PV Capital) and Sung Seung Hoon (Asong Invest) at the MoU. Photo courtesy of Asong.'
+        )
+        p.mb-5.bg-gray-100.p-2 Tran Quang Vinh (PV Capital) and Sung Seung Hoon (Asong Invest) at the MoU. Photo courtesy of Asong.
+
+      .text-xl.font-semibold.pb-4.border-b-2 Other News
+      section.grid.grid-cols-1.gap-5.my-8(class='md:grid-cols-2 lg:grid-cols-3 md:gap-10')
+        - var articleType2List = [{ title:'PV Power, Asong Invest, and PVCB Capital sign MoU on green industry', link:'/news/pv-power-asong-invest-and-pvcb-capital-sign-mou-on-green-industry.html', desc: 'On August 25 in Hanoi, PetroVietnam Power Corporation (PV Power), along with Asong Invest and PVCB Capital, signed an MoU signing to co-invest and collaborate on green industry in Vietnam.', image: 'assets/images/news/news-7.png', date: '29/08/2023'},{ title:'Vietnamese athletes to get $1M bonus for Olympic gold medal', link:'/news/vietnamese-athletes-to-get-1m-bonus-for-olympic-gold-medal.html', desc: 'Any Vietnamese athlete winning a gold medal at the 2024 Olympic Games in France will get a bonus of $1 million.', image: 'assets/images/news/news-4.1.png', date: '02/02/2023'},{ title:"Nemo-PVcom Merit Fund eyes int'l investors", link:'/news/nemo-pvcom-merit-fund-eyes-int-l-investors.html', desc: 'Nemo-PVcom Merit Fund (NPMF) has completed its initial round of funding, aiming to up figures in 2022 and 2023 via global investors.', image: 'assets/images/news/news-6.1.png', date: '23/02/2022'}]
+        each item in articleType2List
+          include /components/article-type2
+          +articleType2(item.title, item.image, item.desc, true, item.link, item.date)

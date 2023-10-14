@@ -18,6 +18,7 @@ const jsFile = {
   contact: 'contact',
   news: 'news',
   newsDetail: 'news/news-detail',
+  galleryDetail: 'galleryDetail',
 }
 
 // Define entry for webpack
@@ -85,29 +86,19 @@ const pagesInfo = [
     build: true,
     buildName: 'news.html',
   },
-  // completed projects
+  // gallery
   {
-    title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund',
-    desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.',
-    url: `${URL_PAGE}asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html`,
+    title: 'Title gallery 1',
+    desc: 'Desc gallery 1',
+    url: `${URL_PAGE}gallery1.html`,
     image: `${URL_PAGE}assets/images/news/news-1.1.png`,
-    filename: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html',
-    template: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.pug',
-    chunks: [jsFile.newsDetail],
+    filename: 'gallery1.html',
+    template: 'gallery/gallery1.pug',
+    chunks: [jsFile.galleryDetail],
     build: true,
-    buildName: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html',
+    buildName: 'gallery1.html',
   },
-  {
-    title: 'Asong Invest, Noble và PVCB Capital ký kết MOU về Quỹ năng lượng tái tạo',
-    desc: "Ngày 23/6/2023, tại Hà Nội, công ty TNHH Asong Invest (viết tắt là Asong Invest), công ty TNHH Noble (Việt Nam) (viết tắt là Noble) và công ty Cổ phần Quản lý Quỹ Ngân hàng TMCP Đại chúng Việt Nam (viết tắt là PVCB Capital) đã ký kết biên bản ghi nhớ về hợp tác chung trong việc thành lập 'Quỹ đầu tư tăng trưởng xanh PV-Asong'",
-    url: `${URL_PAGE}asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html`,
-    image: `${URL_PAGE}assets/images/news/news-1.2.png`,
-    filename: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html',
-    template: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.pug',
-    chunks: [jsFile.newsDetail],
-    build: true,
-    buildName: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html',
-  },
+
   // news
   {
     title:
@@ -145,6 +136,28 @@ const pagesInfo = [
     chunks: [jsFile.newsDetail],
     build: true,
     buildName: 'news/nemo-pvcom-merit-fund-eyes-int-l-investors.html',
+  },
+  {
+    title: 'Asong Invest, Noble, PVCB Capital sign deal for renewable energy fund',
+    desc: 'Asong Invest, Noble Vietnam, and PVCB Capital signed a memorandum of understanding on June 23 to cooperate in establishing the PV-Asong Green Growth Investment Fund.',
+    url: `${URL_PAGE}news/asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html`,
+    image: `${URL_PAGE}assets/images/news/news-1.1.png`,
+    filename: 'asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html',
+    template: 'news/asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.pug',
+    chunks: [jsFile.newsDetail],
+    build: true,
+    buildName: 'news/asong-invest-noble-pvcb-capital-sign-deal-for-renewable-energy-fund.html',
+  },
+  {
+    title: 'Asong Invest, Noble và PVCB Capital ký kết MOU về Quỹ năng lượng tái tạo',
+    desc: "Ngày 23/6/2023, tại Hà Nội, công ty TNHH Asong Invest (viết tắt là Asong Invest), công ty TNHH Noble (Việt Nam) (viết tắt là Noble) và công ty Cổ phần Quản lý Quỹ Ngân hàng TMCP Đại chúng Việt Nam (viết tắt là PVCB Capital) đã ký kết biên bản ghi nhớ về hợp tác chung trong việc thành lập 'Quỹ đầu tư tăng trưởng xanh PV-Asong'",
+    url: `${URL_PAGE}news/asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html`,
+    image: `${URL_PAGE}assets/images/news/news-1.2.png`,
+    filename: 'asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html',
+    template: 'news/asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.pug',
+    chunks: [jsFile.newsDetail],
+    build: true,
+    buildName: 'news/asong-invest-noble-va-pvcb-capital-ky-ket-mou-ve-quy-nang-luong-tai-tao.html',
   },
   {
     title: 'PV Power, Asong Invest, and PVCB Capital sign MoU on green industry',
