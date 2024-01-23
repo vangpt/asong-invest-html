@@ -86,18 +86,19 @@ const pagesInfo = [
     build: true,
     buildName: 'news.html',
   },
-  // gallery
-  {
-    title: 'Title gallery 1',
-    desc: 'Desc gallery 1',
-    url: `${URL_PAGE}gallery1.html`,
-    image: `${URL_PAGE}assets/images/news/news-1.1.png`,
-    filename: 'gallery1.html',
-    template: 'gallery/gallery1.pug',
-    chunks: [jsFile.galleryDetail],
-    build: true,
-    buildName: 'gallery1.html',
-  },
+
+  // demo gallery
+  // {
+  //   title: 'Title gallery 1',
+  //   desc: 'Desc gallery 1',
+  //   url: `${URL_PAGE}gallery1.html`,
+  //   image: `${URL_PAGE}assets/images/news/news-1.1.png`,
+  //   filename: 'gallery1.html',
+  //   template: 'gallery/gallery1.pug',
+  //   chunks: [jsFile.galleryDetail],
+  //   build: true,
+  //   buildName: 'gallery1.html',
+  // },
 
   // news
   {
@@ -169,6 +170,17 @@ const pagesInfo = [
     chunks: [jsFile.newsDetail],
     build: true,
     buildName: 'news/pv-power-asong-invest-and-pvcb-capital-sign-mou-on-green-industry.html',
+  },
+  {
+    title: 'Ủy ban Olympic Việt Nam làm việc với ASONG INVEST',
+    desc: 'Công ty TNHH ASONG INVEST ở Hà Nội, Liên đoàn Bắn súng Việt Nam, Ủy ban Olympic Việt Nam đã có buổi làm việc về việc hỗ trợ, tài trợ cho đội tuyển Bắn súng Việt Nam tìm kiếm thêm các suất tham dự Olympic Paris 2024.',
+    url: `${URL_PAGE}news/uy-ban-olympic-viet-nam-lam-viec-voi-asong-invest.html`,
+    image: `${URL_PAGE}assets/images/news/news-uy-ban-olympic.png`,
+    filename: 'uy-ban-olympic-viet-nam-lam-viec-voi-asong-invest.html',
+    template: 'news/uy-ban-olympic-viet-nam-lam-viec-voi-asong-invest.pug',
+    chunks: [jsFile.newsDetail],
+    build: true,
+    buildName: 'news/uy-ban-olympic-viet-nam-lam-viec-voi-asong-invest.html',
   },
 ]
 

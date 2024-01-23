@@ -1,0 +1,49 @@
+extends /layouts/default
+
+block title
+  - const title = htmlWebpackPlugin.options.title
+  title= title
+
+block metaDescription
+  - const desc = htmlWebpackPlugin.options.desc
+  - const url = htmlWebpackPlugin.options.url
+  - const image = htmlWebpackPlugin.options.image
+  meta(name='description', content=desc)
+  meta(property='og:title', content=title)
+  meta(property='og:description', content=desc)
+  meta(property='og:url', content=url)
+  meta(property='og:image', content=image)
+  meta(name='twitter:title', content=title)
+  meta(name='twitter:description', content=desc)
+  meta(name='twitter:card', content='summary_large_image')
+
+block content
+  include /components/breadcrumb
+  +breadcrumb('news', 'banner-office-3.png')
+
+  .container
+    .my-14.text-justify
+      h3.text-2xl.font-semibold Ủy ban Olympic Việt Nam làm việc với ASONG INVEST
+      span.flex.items-center.mt-3
+        i.icon.icon-calendar_today.mr-3
+        span 05/01/2024
+
+      p.my-5 Ngày 04/01/2024, tại trụ sở Công ty TNHH ASONG INVEST ở Hà Nội, Chủ tịch Liên đoàn Bắn súng Việt Nam Đỗ Văn Bình và Tổng Thư ký Ủy ban Olympic Việt Nam Trần Văn Mạnh có buổi làm việc, trao đổi với Lãnh đạo cấp cao của ASONG về việc hỗ trợ, tài trợ cho đội tuyển Bắn súng Việt Nam tìm kiếm thêm các suất tham dự Olympic Paris 2024. Đây là sự động viên kịp thời tới Ban huấn luyện và đội tuyển Bắn súng Việt Nam hướng tới Olympic 2024.
+
+      .mx-auto(class='md:w-3/4')
+        img.object-cover.c-transition.w-full(
+          src='assets/images/news/news-uy-ban-olympic.png',
+          alt='Ủy ban Olympic Việt Nam làm việc với ASONG INVEST'
+        )
+        p.mb-5.bg-gray-100.p-2 Ủy ban Olympic Việt Nam làm việc với ASONG INVEST
+
+      p.mb-5 Trước đó, đoàn Vận động viên Bắn súng tham gia tập huấn tại Indonesia từ ngày 26/12/2023 đến ngày 03/01/2024 với một phần kinh phí xã hội hóa của Ủy ban Olympic Việt Nam được Công ty TNHH ASONG INVEST tài trợ theo Chương trình Hỗ trợ, Biên bản ghi nhớ giữa 2 Bên.
+
+      p.mb-5 Sau chuyến tập huấn, Đội tuyển Bắn súng tham dự Giải Vô địch Châu Á cũng ngay tại Jakarta, Indonesia từ ngày 04-18/01/2024. Kết thúc Giải, Đội tuyển xuất sắc đạt 1 huy chương Vàng, 2 huy chương Bạc và đặc biệt là xạ thủ 20 tuổi Lê Thị Mộng Tuyền của tuyển bắn súng Việt Nam đã thi đấu xuất sắc ở nội dung 10m súng trường hơi qua đó giành tấm vé danh giá đến Olympic Paris 2024.
+
+      .text-xl.font-semibold.pb-4.border-b-2 Other News
+      section.grid.grid-cols-1.gap-5.my-8(class='md:grid-cols-2 lg:grid-cols-3 md:gap-10')
+        - var articleType2List = [{ title:'PV Power, Asong Invest, and PVCB Capital sign MoU on green industry', link:'/news/pv-power-asong-invest-and-pvcb-capital-sign-mou-on-green-industry.html', desc: 'On August 25 in Hanoi, PetroVietnam Power Corporation (PV Power), along with Asong Invest and PVCB Capital, signed an MoU signing to co-invest and collaborate on green industry in Vietnam.', image: 'assets/images/news/news-7.png', date: '29/08/2023'},{ title:'International Sports Strategy Foundation, Vietnam Olympic Committee collaborate in training', link:'/news/international-sports-strategy-foundation-vietnam-olympic-committee-collaborate-in-training.html', desc: 'The International Sports Strategy Foundation (ISF) will open an office in Vietnam, with assistance from Gemopia Investment Group, to boost sport training with Vietnam Olympic Committee.', image: 'assets/images/news/news-3.1.png', date: '09/12/2022'},{ title:"Nemo-PVcom Merit Fund eyes int'l investors", link:'/news/nemo-pvcom-merit-fund-eyes-int-l-investors.html', desc: 'Nemo-PVcom Merit Fund (NPMF) has completed its initial round of funding, aiming to up figures in 2022 and 2023 via global investors.', image: 'assets/images/news/news-6.1.png', date: '23/02/2022'}]
+        each item in articleType2List
+          include /components/article-type2
+          +articleType2(item.title, item.image, item.desc, true, item.link, item.date)
